@@ -7,7 +7,10 @@ l1 = "MAG{DeB$g_!S_A@esome}"
 portl1 = 11111
 l2 = "MAG{$rInt_I$+Cra^y:)}"
 portl2 = 11113
-flags = [(l1, portl1),(l2,portl2)]
+
+l3 = "MAG{WHAT$A££_B€$T}"
+portl3 = 11114
+flags = [(l1, portl1),(l2,portl2),(l3,portl3)]
 
 @app.route('/check_answer',methods=["POST"])
 def answer_ctf():
