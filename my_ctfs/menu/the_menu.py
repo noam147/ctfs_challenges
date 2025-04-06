@@ -6,6 +6,7 @@ app = Flask(__name__)
 l1 = "MAG{DeB$g_!S_A@esome}"
 portl1 = 11111
 l2 = "MAG{$rInt_I$+Cra^y:)}"
+l2 = 11113
 flags = [(l1, portl1)]
 
 
