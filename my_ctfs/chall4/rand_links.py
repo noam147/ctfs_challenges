@@ -10,7 +10,7 @@ def create_rand_links(n):
         return ''.join(random.choices(string.ascii_letters + string.digits, k=22))
     for i in range(n):
         rand_link = base_link+generate_random_string()
-        final_text += rand_link+"\n"
+        final_text += str(i)+". "+rand_link+"<br>\n"
 
     with open("links.txt","w") as f:
         f.write(final_text)
