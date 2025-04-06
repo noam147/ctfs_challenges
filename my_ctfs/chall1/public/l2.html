@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Command Sender</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      font-size: 18px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Send Prime Number to Server</h1>
+  <input type="number" id="command" placeholder="Enter number">
+  <button onclick="sendToServer()">Send</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function sendToServer() {
+      const input = document.getElementById('command').value;
+
+      const response = await fetch('/calculate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ command: input })
+      });
+
+      const data = await response.json();
+      document.getElementById('result').innerText = `Server says: ${data.status}`;
+    }
+  </script>
+
+</body>
+</html>
