@@ -46,7 +46,7 @@ def serve(req_path):
     if os.path.isfile(abs_path):
         print("this is file:) ")
         return send_from_directory(IMGS, req_path)
-
+    req_path = req_path.replace('..','')#for file traversal defence
     abs_path = os.path.join(IMGS, req_path)
     # It's a folder, show contents as HTML
     files = os.listdir(abs_path)

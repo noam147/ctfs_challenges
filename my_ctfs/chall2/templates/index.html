@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Solve The Qubes!!!</h1>
+  <div class="gallery">
+    <a href="https://mymoodle.youcube.co.il/mod/quiz/view.php?id=519"><img src="imgs/img1.jpg" alt="Image 1"></a>
+    <a href="https://mymoodle.youcube.co.il/mod/quiz/view.php?id=267"><img src="imgs/img2.gif" alt="Image 2"></a>
+    <a href="https://mymoodle.youcube.co.il/mod/quiz/view.php?id=133"><img src="imgs/img3.gif" alt="Image 3"></a>
+    <a href="https://mymoodle.youcube.co.il/mod/quiz/view.php?id=143"><img src="imgs/img4.gif" alt="Image 4"></a>
+    <a href="https://mymoodle.youcube.co.il/blog/index.php?userid=13178"><img src="imgs/img5.jpg" alt="Image 5"></a>
+  </div>
+</body>
+</html>
