@@ -1,6 +1,6 @@
 import builtins
 def print(s:str,a="",b="",c="",d="",e=""):
-    flag = "YAY"
+    flag = "MAG{$rInt_I$+Cra^y:)}"
     if e != "":
         return flag
     if b != "":

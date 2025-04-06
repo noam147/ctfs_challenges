@@ -5,6 +5,7 @@ app = Flask(__name__)
 # Example flag and port list
 l1 = "MAG{DeB$g_!S_A@esome}"
 portl1 = 11111
+l2 = "MAG{$rInt_I$+Cra^y:)}"
 flags = [(l1, portl1)]
 
 
