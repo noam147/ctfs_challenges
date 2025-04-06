@@ -21,7 +21,7 @@ def route_things():
     html += """
     <script>
         function visitChallenge(port) {
-            window.location.href = 'http://127.0.0.1:' + port;  // Redirect to the correct port for the challenge
+            window.location.href = 'http://http://13.51.79.222/:' + port;  // Redirect to the correct port for the challenge
         }
     </script>
     """
