@@ -71,4 +71,4 @@ def serve(req_path):
 
 
 if __name__ == '__main__':
-    app.run(debug=True,port=11111)
+    app.run(debug=True,port=11111,host="0.0.0.0")
