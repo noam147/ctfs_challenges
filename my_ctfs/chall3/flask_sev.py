@@ -26,13 +26,7 @@ from time import time
 white_list = ['len', 'print', 'str', 'int', 'min', 'sum', 'dict']
 
 def check_command(command: str) -> bool:
-    "
-    Check if the
-    command is in the
-    whitelist.
-    "
-    command_parts = command.split()
-    return command_parts[0] in white_list
+    return command in white_list
 
 def handle_client(client_socket):
     client_socket.send("Hello user, enter a Python command to exec - just the command name\n"

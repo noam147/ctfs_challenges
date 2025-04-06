@@ -10,12 +10,7 @@ white_list = ['len','print','str','int','min','sum','dict']
 
 
 def check_command(command: str) -> bool:
-    """
-    Check if the command is in the whitelist.
-    """
-    # Split the command into parts and check if the first part is in the whitelist
-    command_parts = command.split()
-    return command_parts[0] in white_list
+    return command in white_list
 
 
 def handle_client(client_socket):
