@@ -10,7 +10,10 @@ portl2 = 11113
 
 l3 = "MAG{WHAT$A££_B€$T}"
 portl3 = 11114
-flags = [(l1, portl1),(l2,portl2),(l3,portl3)]
+
+l4 = "MAG{!MG$_A&E_C00L!}"
+portl4 = 11116
+flags = [(l1, portl1),(l2,portl2),(l3,portl3),(l4,portl4)]
 
 @app.route('/check_answer',methods=["POST"])
 def answer_ctf():
@@ -18,6 +21,9 @@ def answer_ctf():
     index = data["ctf_index"]
     answer = data["answer"]
     if answer == flags[index][0]:
+        ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+        with open("solvers","a") as f:
+            f.write(ip+" answered: "+str(index))
         return jsonify({"message": "Wow, you solved that!"})
     return jsonify({"message": "Wrong answer :("})
 @app.route('/')

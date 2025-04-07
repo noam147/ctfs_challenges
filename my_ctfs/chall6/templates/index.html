@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Palestine Army</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px;
+            background-color: #f8f9fa;
+        }
+        .fighter-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Palestine Army</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#fighters">Fighters</a></li>
+                <li class="nav-item"><a class="nav-link" href="/recruit">Recruit</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<div class="container text-center mt-5">
+    <h1>Welcome to Palestine Army!</h1>
+    <a href="/recruit">
+        <h3 class="text-success mt-3">Recruit here</h3>
+    </a>
+    <p class="lead mt-3">Join a powerful army that serves with <strong>Determination and perseverance</strong>.</p>
+    <p class="mt-4">Meet our fighters:</p>
+</div>
+
+<!-- Fighters Section -->
+<div class="container mt-4" id="fighters">
+    <div class="row">
+        <!-- Fighter 1 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{{ url_for('static', filename='images/fighter1.jpg') }}" class="card-img-top" alt="Leila Khaled">
+                <div class="card-body">
+                    <h5 class="card-title">Leila Khaled</h5>
+                    <p class="card-text">A legendary figure in the Palestinian resistance, known for her courage and defiance in global awareness campaigns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fighter 2 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow">
+                <a href="/figure/Ghassan Kanafani"><img src="{{ url_for('static', filename='images/fighter2.jpg') }}" class="card-img-top" alt="Ghassan Kanafani"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Ghassan Kanafani</h5>
+                    <p class="card-text">A political writer and spokesperson whose words gave voice to a generation of Palestinian youth and intellectuals.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fighter 3 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow">
+                <a href="/figure/yasser arafat"><img src="{{ url_for('static', filename='images/fighter3.jpg') }}" class="card-img-top" alt="Yasser Arafat"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Yasser Arafat</h5>
+                    <p class="card-text">The leader of the PLO and a symbol of the Palestinian national movement for decades. Known worldwide for his diplomacy and struggle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fighter 4 -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{{ url_for('static', filename='images/fighter4.jpg') }}" class="card-img-top" alt="Dalal Mughrabi">
+                <div class="card-body">
+                    <h5 class="card-title">Dalal Mughrabi</h5>
+                    <p class="card-text">A revolutionary fighter remembered for her bravery in one of the most notable operations in Palestinian history.</p>
+                </div>
+            </div>
+        </div>
+		
+		 <!-- Fighter 5? -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{{ url_for('static', filename='images/fighter5.jpg') }}" class="card-img-top" alt="Dalal Mughrabi">
+                <div class="card-body">
+                    <h5 class="card-title">Anonymous</h5>
+                    <p class="card-text">Rumored leader of a cyber unit in Gaza. Known by the alias <strong>"Falastech"</strong>. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
