@@ -37,4 +37,4 @@ def get_figure(figure:str):
     with open(figure.lower()+".html","r") as f:
         return f.read()
 if __name__ == '__main__':
-    app.run(debug=False,port=PORT)
+    app.run(debug=False,port=PORT,host="0.0.0.0")
