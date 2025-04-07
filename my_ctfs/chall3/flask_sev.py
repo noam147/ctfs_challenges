@@ -11,7 +11,7 @@ def handle_user():
     <html>
         <head><title>Welcome</title></head>
         <body>
-            <h2>Connect with ncat to port 99999 and find the flag!</h2>
+            <h2>Connect with ncat to port 9999 and find the flag!</h2>
             <p>Here is the source code for your pleasure :)</p>
             <p><em>Remember, in this world, things are rarely as they seem...</em></p>
 
