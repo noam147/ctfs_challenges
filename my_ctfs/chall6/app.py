@@ -8,12 +8,17 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route("/an_workspace")
+def get_flag():
+    with open("workspace.html", "r") as f:
+        return f.read()
 @app.route("/login",methods=['POST'])
 def check_login():
     try:
         data = json.loads(request.data.decode())
         if data["username"] == "HA!CK#R_GAZA" and data["password"] == "Falastech":
-            return "MAG{!MG$_A&E_C00L!}"
+            return "/an_workspace"
         return "wrong :("
     except Exception as e:
         return "error :("

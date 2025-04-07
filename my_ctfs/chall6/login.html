@@ -27,9 +27,9 @@
 </head>
 <body>
 
-<div class="login-box">
+<div class="login-box" id="login-box">
     <h2 class="text-center mb-4">Recruit / Login</h2>
-
+    <!--do not try to waste your time with sql injection testing pls-->
     <form id="login-form">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
@@ -63,9 +63,26 @@ document.getElementById('login-form').addEventListener('submit', async function(
     const text = await response.text();
     const responseMessage = document.getElementById('response-message');
 
-    responseMessage.textContent = text;
-    responseMessage.classList.toggle('text-danger', !response.ok);
-    responseMessage.classList.toggle('text-success', response.ok);
+    if(text[0] == "/")
+	{
+	//this is a redirect
+	window.location.href = text;
+	}
+	
+	// Check if the response length is greater than 100 characters
+    if (text.length > 100) {
+        const loginBox = document.getElementById('login-box');
+        
+        // Clear the existing content of login-box
+        loginBox.innerHTML = '';
+        
+        // Insert the new response content
+        loginBox.innerHTML = `<div class="alert alert-danger" role="alert">${text}</div>`;
+    } else {
+        responseMessage.textContent = text;
+        responseMessage.classList.toggle('text-danger', !response.ok);
+        responseMessage.classList.toggle('text-success', response.ok);
+    }
 });
 </script>
 
