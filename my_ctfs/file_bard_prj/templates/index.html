@@ -165,11 +165,18 @@
         method: 'POST',
         body: formData
       })
-      .then(response => response.text())
+      .then(response => response.json())
       .then(data => {
+
         document.getElementById('loading').style.display = 'none';
         document.getElementById('result').style.display = 'block';
-        document.getElementById('result').innerHTML = `<strong>Result:</strong> ${data}`;
+		if (data.success) {
+    // Redirect if successful
+    window.location.href = data.link; // e.g., "/link"
+  } else {
+    // Show error message
+    document.getElementById('result').innerHTML = `<strong>Error:</strong> ${data.message || 'Try again.'}`;
+  }
       })
       .catch(err => {
         document.getElementById('loading').style.display = 'none';

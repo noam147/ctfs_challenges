@@ -1,4 +1,4 @@
-from flask import Flask,url_for, request, render_template,Response, send_from_directory,abort
+from flask import Flask,url_for,jsonify, request, render_template,Response, send_from_directory,abort
 import time
 import secrets
 import bard_handler
@@ -39,22 +39,24 @@ def upload():
 
 
     if not file:
-        return "No file uploaded", 400
+        return jsonify({'success':False,'link':""})
 
     content = file.read().decode('utf-8')
     content = reduce_content(content,start_date,end_date)
     response = get_answer_from_bard(content,option,username)
-
+    current_file_id_usermode = generate_random_str()
+    response = (f"<h4>your personal link for sharing: <a href=/user_response/{current_file_id_usermode}>http://13.51.79.222:5001/user_response/{current_file_id_usermode}</a></h4><br>"
+                + response)
     files_handler.save_response_to_machine(response,option)
     #after we saved we will provide the user with its link
-    current_file_id_usermode = generate_random_str()
+
     if start_date != None and start_date != "" and end_date != "":
         reminder = f"<h3>Relevant for dates:{start_date}-{end_date}</h3><br><br>"
         files_handler.save_response_to_machine_user_mode(reminder+response,option,current_file_id_usermode)
     else:
         files_handler.save_response_to_machine_user_mode(response, option, current_file_id_usermode)
     final_text = f"<h4>your personal link for sharing: <a href=/user_response/{current_file_id_usermode}>http://13.51.79.222:5001/user_response/{current_file_id_usermode}</a></h4><br>{response}"
-    return final_text
+    return jsonify({'success':True,'link':"/user_response/"+current_file_id_usermode})
 
 def reduce_content(original_content,start_date,end_date):
     if start_date == "" or end_date == "":
