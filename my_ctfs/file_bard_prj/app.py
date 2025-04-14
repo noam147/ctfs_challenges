@@ -48,7 +48,7 @@ def upload():
     files_handler.save_response_to_machine(response,option)
     #after we saved we will provide the user with its link
     current_file_id_usermode = generate_random_str()
-    if start_date != "" and end_date != "":
+    if start_date != None and start_date != "" and end_date != "":
         reminder = f"<h3>Relevant for dates:{start_date}-{end_date}</h3><br><br>"
         files_handler.save_response_to_machine_user_mode(reminder+response,option,current_file_id_usermode)
     else:

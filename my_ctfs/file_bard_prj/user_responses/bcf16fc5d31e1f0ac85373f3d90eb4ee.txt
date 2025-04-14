@@ -1,0 +1,222 @@
+<h1>OPTION:5</h1><br><h3>Relevant for dates:None-None</h3><br><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ניתוח משתתפי צ'אט</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #6a7fc1; /* Deep blue-purple */
+            color: #ffffff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #e9e9f9; /* Light lavender */
+        }
+        tr:hover {
+            background-color: #dcdcf4; /* Slightly darker lavender */
+        }
+        .score-cell {
+            font-weight: bold;
+            text-align: center;
+            width: 8%; /* Adjust width as needed */
+        }
+        .score-0-2 { background-color: #ffdddd; color: #d8000c; } /* Light Red */
+        .score-3-4 { background-color: #fff5cc; color: #f59e0b; } /* Light Yellow */
+        .score-5-6 { background-color: #e6ffcc; color: #689f38; } /* Light Green */
+        .score-7-8 { background-color: #d1f7d1; color: #1e8e3e; } /* Medium Green */
+        .score-9-10 { background-color: #a7e3a7; color: #0d6a2e; } /* Dark Green */
+
+        .category-racism .score-3-4,
+        .category-racism .score-5-6,
+        .category-racism .score-7-8,
+        .category-racism .score-9-10 {
+            background-color: #ffcccc; /* More intense red for racism */
+            color: #b00020;
+        }
+         .category-racism .score-0-2 {
+             background-color: #e6ffcc; /* Green for low racism score */
+             color: #1e8e3e;
+        }
+
+
+        .participant-name {
+            font-weight: bold;
+            color: #3e4a6e; /* Dark blue */
+        }
+
+        /* Tooltip styles (optional) */
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 180px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%; /* Position the tooltip above the text */
+          left: 50%;
+          margin-left: -90px; /* Use half of the width to center the tooltip */
+          opacity: 0;
+          transition: opacity 0.3s;
+          font-size: 12px;
+        }
+
+         .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%; /* At the bottom of the tooltip */
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>ניתוח משתתפי צ'אט</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>משתתף</th>
+                <th>
+                    <div class="tooltip">דתיות 🤔
+                        <span class="tooltiptext">מידת הביטוי של אמונות, טקסטים, ערכים או מסורות דתיות.</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="tooltip">ציונות 🇮🇱
+                         <span class="tooltiptext">מידת התמיכה או הביטוי של אידיאולוגיה ציונית, סמלים או ביטויים לאומיים הקשורים לישראל.</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="tooltip">גזענות 🤬
+                         <span class="tooltiptext">תדירות אמירות שאינן רגישות מבחינה גזעית, מפלות או שניתן לפרשן כדעות קדומות. (ציון גבוה = יותר בעייתי)</span>
+                    </div>
+                </th>
+                 <th>
+                    <div class="tooltip">אינטליגנציה רגשית 🧠
+                         <span class="tooltiptext">יכולת להגיב במחשבה, להזדהות עם אחרים ולנהל קונפליקטים באופן בונה.</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="tooltip">התאמה לקצונה ⭐
+                         <span class="tooltiptext">מבוסס על תכונות מנהיגות, משמעת, אחריות ובגרות - הערכה להתאמה לתפקיד סמכותי.</span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="participant-name">אריאל יושעי (😃)</td>
+                <td class="score-cell score-5-6">5</td>
+                <td class="score-cell score-7-8">7</td>
+                <td class="score-cell category-racism score-7-8">7</td>
+                <td class="score-cell score-3-4">4</td>
+                <td class="score-cell score-3-4">3</td>
+            </tr>
+            <tr>
+                <td class="participant-name">איל ממן</td>
+                <td class="score-cell score-7-8">7</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell category-racism score-3-4">3</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell score-5-6">6</td>
+            </tr>
+             <tr>
+                <td class="participant-name">דביר פריש</td>
+                <td class="score-cell score-3-4">4</td>
+                <td class="score-cell score-9-10">9</td>
+                 <td class="score-cell category-racism score-5-6">6</td>
+                <td class="score-cell score-5-6">5</td>
+                <td class="score-cell score-5-6">5</td>
+            </tr>
+            <tr>
+                <td class="participant-name">אלישיב ברק</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell score-7-8">7</td>
+                <td class="score-cell category-racism score-7-8">8</td>
+                <td class="score-cell score-3-4">3</td>
+                <td class="score-cell score-0-2">2</td>
+            </tr>
+             <tr>
+                <td class="participant-name">אורי שגיב</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell category-racism score-3-4">4</td>
+                <td class="score-cell score-7-8">7</td>
+                <td class="score-cell score-7-8">7</td>
+            </tr>
+             <tr>
+                <td class="participant-name">נועם מרסיאנו</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell score-7-8">7</td>
+                <td class="score-cell category-racism score-5-6">6</td>
+                <td class="score-cell score-5-6">5</td>
+                <td class="score-cell score-5-6">6</td>
+            </tr>
+             <tr>
+                <td class="participant-name">יוסף בוכניק</td>
+                <td class="score-cell score-7-8">8</td>
+                <td class="score-cell score-5-6">5</td>
+                 <td class="score-cell category-racism score-0-2">2</td>
+                <td class="score-cell score-5-6">6</td>
+                <td class="score-cell score-5-6">5</td>
+            </tr>
+              <tr>
+                <td class="participant-name">יונתן גוטמן</td>
+                <td class="score-cell score-3-4">3</td>
+                <td class="score-cell score-3-4">4</td>
+                <td class="score-cell category-racism score-0-2">1</td>
+                <td class="score-cell score-5-6">5</td>
+                <td class="score-cell score-3-4">4</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+```

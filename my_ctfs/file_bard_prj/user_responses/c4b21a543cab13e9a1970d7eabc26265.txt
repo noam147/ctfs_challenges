@@ -1,0 +1,214 @@
+<h1>OPTION:5</h1><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ניתוח משתתפי קבוצת WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+        tr:hover {
+            background-color: #d6eaf8;
+        }
+        .participant-name {
+            font-weight: bold;
+            color: #2980b9;
+            text-align: right; /* Align Hebrew names to the right */
+        }
+        .score-cell {
+            font-weight: bold;
+        }
+        .explanation {
+            background-color: #e8f6f3;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #1abc9c;
+        }
+        .explanation h2 {
+            color: #16a085;
+            margin-top: 0;
+        }
+        .explanation p {
+            margin-bottom: 10px;
+        }
+         .explanation strong {
+            color: #2c3e50;
+         }
+        .category-label {
+             font-style: italic;
+             color: #555;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ניתוח תוכן וטון - קבוצת WhatsApp</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>שם המשתתף</th>
+                    <th>דתיות</th>
+                    <th>ציונות</th>
+                    <th>גזענות</th>
+                    <th>הומור</th>
+                    <th>זכר אלפא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="participant-name">אריאל יושעי (😃)</td>
+                    <td class="score-cell">4</td>
+                    <td class="score-cell">7</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">9</td>
+                    <td class="score-cell">7</td>
+                </tr>
+                <tr>
+                    <td class="participant-name">איל ממן</td>
+                    <td class="score-cell">5</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">3</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">4</td>
+                </tr>
+                <tr>
+                    <td class="participant-name">דביר פריש</td>
+                    <td class="score-cell">3</td>
+                    <td class="score-cell">8</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">9</td>
+                    <td class="score-cell">9</td>
+                </tr>
+                 <tr>
+                    <td class="participant-name">אלישיב ברק</td>
+                    <td class="score-cell">5</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">7</td>
+                    <td class="score-cell">9</td>
+                    <td class="score-cell">8</td>
+                 </tr>
+                 <tr>
+                    <td class="participant-name">אורי שגיב</td>
+                    <td class="score-cell">5</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">4</td>
+                    <td class="score-cell">7</td>
+                    <td class="score-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="participant-name">נועם מרסיאנו</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">7</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">9</td>
+                    <td class="score-cell">8</td>
+                </tr>
+                <tr>
+                    <td class="participant-name">יונתן גוטמן</td>
+                    <td class="score-cell">2</td>
+                    <td class="score-cell">5</td>
+                    <td class="score-cell">2</td>
+                    <td class="score-cell">3</td>
+                    <td class="score-cell">3</td>
+                </tr>
+                <tr>
+                    <td class="participant-name">יוסף בוכניק</td>
+                    <td class="score-cell">8</td>
+                    <td class="score-cell">6</td>
+                    <td class="score-cell">2</td>
+                    <td class="score-cell">3</td>
+                    <td class="score-cell">4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="explanation">
+            <h2>הסבר לניקוד</h2>
+            <p>הניקוד ניתן על סמך ניתוח ההודעות בקבוצה, תוך התמקדות בתדירות ובטון של התבטאויות בכל קטגוריה. להלן פירוט על הציונים הגבוהים והנמוכים הבולטים:</p>
+
+            <p><strong class="category-label">דתיות:</strong>
+                <strong>יוסף בוכניק (8)</strong> קיבל את הציון הגבוה ביותר עקב התמקדותו בתהליך דחיית השירות לישיבה ("דחיית גיוס לבני ישיבות"), והטון הרציני יותר בהודעותיו בנושאים אלו, המצביע על חשיבות הערכים הדתיים עבורו.
+                <strong>יונתן גוטמן (2)</strong> קיבל את הציון הנמוך ביותר בעיקר בשל מיעוט הודעות רלוונטיות; קשה היה להעריך את מידת דתיותו מהטקסט. גם <strong>דביר פריש (3)</strong> קיבל ציון נמוך יחסית, כיוון שבעוד שהוא דן באפשרות של דחיית שירות לישיבה, הוא מחליט נגדה והדיונים שלו נוטים להיות פרקטיים יותר מאשר ערכיים-דתיים.
+            </p>
+
+            <p><strong class="category-label">ציונות:</strong>
+                <strong>דביר פריש (8)</strong> קיבל את הציון הגבוה ביותר בשל מעורבותו האינטנסיבית בתהליכי המיון הצבאיים (עתודה, צנחנים), הבעת תסכול מהמערכת תוך רצון לשרת בתפקיד משמעותי, ושיתוף תדיר של חדשות ודיונים הקשורים לצבא ולמדינה.
+                 <strong>יונתן גוטמן (5)</strong> קיבל ציון נמוך יחסית, שוב עקב מיעוט נתונים, אם כי שיתוף מידע על זימונים צבאיים של חברים מראה על מודעות והקשר לנושא. רמת הציונות הכללית בקבוצה נראית בינונית-גבוהה.
+            </p>
+
+            <p><strong class="category-label">גזענות:</strong>
+                <strong>אלישיב ברק (7)</strong> קיבל את הציון הגבוה ביותר כיוון שהוא יוזם חלק ניכר מההומור הפרובוקטיבי וה"אדג'י", כולל שימוש בביטויים כמו "כושי" (למשל בתיאור סרט מיינקראפט) ובדיחות גבוליות אחרות ("סוטה", בדיחות על אריאל).
+                <strong>יונתן גוטמן ויוסף בוכניק (2)</strong> קיבלו את הציונים הנמוכים ביותר בשל היעדר התבטאויות גזעניות או פוגעניות בהודעותיהם. משתתפים אחרים (אריאל, דביר, נועם) קיבלו ציונים בינוניים עקב שימוש בביטויים כמו "כושי" או "יהודון" באופן שנראה יותר כלאחר יד או כחלק מהבדיחות הפנימיות, אך עדיין מצדיק ציון.
+            </p>
+
+            <p><strong class="category-label">הומור:</strong>
+               <strong>אריאל יושעי, דביר פריש, אלישיב ברק, ונועם מרסיאנו (9)</strong> קיבלו ציונים גבוהים מאוד. הם פעילים ביותר, מרבים בבדיחות, שיתוף ממים וקישורים מצחיקים, עקיצות הדדיות ("אמאשך"), ויצירת אווירה הומוריסטית בקבוצה.
+               <strong>יונתן גוטמן ויוסף בוכניק (3)</strong> קיבלו ציונים נמוכים בשל מיעוט השתתפות בבדיחות ובאווירה הקלילה, וטון רציני יותר ברוב הודעותיהם.
+            </p>
+
+            <p><strong class="category-label">זכר אלפא:</strong>
+                <strong>דביר פריש (9)</strong> קיבל את הציון הגבוה ביותר בשל נפח ההודעות הגבוה שלו, הובלת דיונים רבים, אסרטיביות בקידום מטרותיו הצבאיות, התנהגות תחרותית (למשל ברצון לזכות בהגרלה), ושימוש בביטויים דומיננטיים בבדיחות. <strong>אלישיב ברק ונועם מרסיאנו (8)</strong> גם הם מציגים התנהגות דומיננטית דרך ייזום פעילויות, הבעת דעות נחרצת והובלת שיחות.
+                <strong>יונתן גוטמן (3)</strong> קיבל את הציון הנמוך ביותר בשל השתתפות פאסיבית יחסית. <strong>איל ממן ויוסף בוכניק (4)</strong> גם הם קיבלו ציונים נמוכים יותר; איל עזב את הקבוצה זמנית עקב עקיצות (פחות 'אלפא'), ויוסף פחות מעורב בדינמיקה החברתית התחרותית.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+```

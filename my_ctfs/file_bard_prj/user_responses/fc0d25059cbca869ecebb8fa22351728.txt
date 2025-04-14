@@ -1,0 +1,238 @@
+<h1>OPTION:5</h1><br><h3>Relevant for dates:None-None</h3><br><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ניתוח משתתפי צ'אט</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            direction: rtl; /* Right-to-left layout for Hebrew */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3; /* Dark blue */
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #007bff; /* Lighter blue */
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #007bff; /* Primary blue */
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        tr:nth-child(even) {
+            background-color: #e9f5ff; /* Light blue for even rows */
+        }
+        tr:hover {
+            background-color: #cce7ff; /* Slightly darker blue on hover */
+            cursor: default;
+        }
+        td {
+            font-size: 1em;
+        }
+        .justification-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa; /* Very light grey */
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .justification-block {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .justification-block:last-child {
+            border-bottom: none;
+        }
+        .justification-block p {
+            line-height: 1.6;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #343a40; /* Dark grey for emphasis */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ניתוח תוכן והתנהגות משתתפים בקבוצת וואטסאפ</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>משתתף</th>
+                    <th>דתיות</th>
+                    <th>ציונות</th>
+                    <th>גזענות (0=נמוכה, 10=גבוהה)</th>
+                    <th>אינטליגנציה רגשית</th>
+                    <th>התאמה לקצונה</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>אריאל יושעי</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>איל ממן</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                 <tr>
+                    <td>דביר פריש</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>אלישיב ברק</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                 <tr>
+                    <td>אורי שגיב</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>6</td>
+                </tr>
+                 <tr>
+                    <td>נועם מרסיאנו</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>7</td>
+                </tr>
+                 <tr>
+                    <td>יונתן גוטמן</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>4</td>
+                </tr>
+                 <tr>
+                    <td>יוסף בוכניק</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>6</td>
+                </tr>
+                <!-- Add rows for other participants as analyzed -->
+            </tbody>
+        </table>
+
+        <div class="justification-section">
+            <h2>הסבר ונימוק הציונים</h2>
+
+            <div class="justification-block">
+                <h3>אריאל יושעי</h3>
+                <p><strong>הציון הגבוה ביותר (גזענות - 7):</strong> נובע משימוש חוזר בביטויים כמו "כושים" (לדוגמה בהקשר לסרט מיינקראפט) ובדיחות בעלות אופי סטריאוטיפי או פוגעני כלפי קבוצות אתניות/דתיות.</p>
+                <p><strong>הציון הנמוך ביותר (התאמה לקצונה - 3):</strong> משקף קשיים בלקיחת אחריות (חסימה מדיסקורד, כישלון בטסט), חרדה גבוהה לגבי שיבוץ צבאי, ותלות באחרים לעזרה בלימודים, למרות נחישותו לנסות להתקבל ליחידות מסוימות. מראה על בגרות נמוכה יחסית.</p>
+             </div>
+
+            <div class="justification-block">
+                 <h3>איל ממן</h3>
+                 <p><strong>הציון הגבוה ביותר (דתיות - 6):</strong> נובע מהחלטתו לדחות שירות לטובת ישיבה/מכינה ואזכורים כלליים של הווי דתי, התואמים רקע דתי-לאומי סטנדרטי.</p>
+                 <p><strong>הציון הנמוך ביותר (גזענות - 3):</strong> משתתף באווירה הכללית ובבדיחות, אך במידה פחותה ובולטת מאחרים בקבוצה. אין עדויות רבות לשימוש בביטויים פוגעניים באופן ישיר.</p>
+            </div>
+
+            <div class="justification-block">
+                 <h3>דביר פריש</h3>
+                 <p><strong>הציון הגבוה ביותר (ציונות - 7):</strong> נובע מהעיסוק האינטנסיבי בשירות צבאי (עתודה, צנחנים), פרופיל קרבי גבוה (97), שיתוף חדשות רלוונטיות ותסכול מול מערכת מיט"ב, המעיד על חשיבות השירות עבורו.</p>
+                 <p><strong>הציונים הנמוכים ביותר (דתיות, אינטליגנציה רגשית - 4):</strong> בחר שלא לדחות לישיבה למרות הרקע. באינטליגנציה רגשית, הציון נובע משימוש רב בבדיחות "אמאשך", הבעת תסכול בצורה ישירה ולעיתים פחות מרוסנת, והשתתפות בהתבדחויות קבוצתיות פרובוקטיביות.</p>
+            </div>
+
+             <div class="justification-block">
+                 <h3>אלישיב ברק</h3>
+                 <p><strong>הציון הגבוה ביותר (גזענות - 7):</strong> בדומה לאריאל, נובע מבדיחות רבות בעלות אופי גזעני/סטריאוטיפי, שימוש בביטויים פוגעניים והתבטאויות פרובוקטיביות רבות בנושאים אלו.</p>
+                 <p><strong>הציון הנמוך ביותר (אינטליגנציה רגשית - 3):</strong> מתבטא בהיותו יוזם עיקרי של התבדחויות פרובוקטיביות ופוגעניות ("סוטה"), דחיקת גבולות מתמדת, ולעיתים חוסר רגישות לתגובות האחרים.</p>
+             </div>
+
+            <div class="justification-block">
+                 <h3>אורי שגיב</h3>
+                 <p><strong>הציונים הגבוהים ביותר (אינטליגנציה רגשית, התאמה לקצונה, ציונות - 6):</strong> באינטליגנציה רגשית, לעיתים משמש כקול מתון, מבהיר דברים ומסביר מושגים (פסיכומטרי). בהתאמה לקצונה, נראה יחסית בוגר, אחראי ובעל ידע. בציונות, מראה עניין וידע בתהליכים צבאיים ומשתף חדשות רלוונטיות.</p>
+                 <p><strong>הציון הנמוך ביותר (גזענות - 4):</strong> משתתף בבדיחות הכלליות אך במידה מתונה יותר מאחרים, ואף נראה כמבקר שימוש בביטויים מסוימים. עיקר ההתבטאויות הבעייתיות הן בדיחות על רקע עדתי (ספרדי/אשכנזי).</p>
+             </div>
+
+            <div class="justification-block">
+                 <h3>נועם מרסיאנו</h3>
+                 <p><strong>הציון הגבוה ביותר (התאמה לקצונה - 7):</strong> הציון נובע מהתקבלותו ליחידת גאמ"א התובענית, הפגנת יוזמה (ארגון הימורים, שיתוף מידע פסיכומטרי), ונחישות בלימודים (פסיכומטרי).</p>
+                 <p><strong>הציון הנמוך ביותר (דתיות - 4):</strong> למרות הרקע, בחר במסלול טכנולוגי בצבא (גאמ"א) ולא דחיית שירות לישיבה. מתבדח על הבדלים דתיים (אשכנזי/ספרדי) אך לא מביע עיסוק דתי מעמיק.</p>
+            </div>
+
+            <div class="justification-block">
+                <h3>יונתן גוטמן</h3>
+                <p><strong>הציון הגבוה ביותר (אינטליגנציה רגשית - 5):</strong> בהתבסס על פעילותו המצומצמת, נראה ניטרלי, שואל שאלות חברתיות ומשתף מידע כשמתבקש.</p>
+                <p><strong>הציון הנמוך ביותר (גזענות - 2):</strong> כמעט ולא נמצאו עדויות להתבטאויות בעייתיות, בעיקר עקב מיעוט ההודעות.</p>
+                <p><em>(הערה: הציונים עבור יונתן מבוססים על מידע מועט וברמת ביטחון נמוכה)</em></p>
+            </div>
+
+             <div class="justification-block">
+                 <h3>יוסף בוכניק</h3>
+                 <p><strong>הציון הגבוה ביותר (דתיות - 7):</strong> הציון נובע מהחלטתו הברורה לדחות שירות לישיבה, ביקור בישיבות והפגנת רצינות רבה יותר בנושאים דתיים בהשוואה לאחרים.</p>
+                 <p><strong>הציון הנמוך ביותר (גזענות - 2):</strong> כמעט ולא השתתף בבדיחות הגזעניות/פרובוקטיביות שהיו נפוצות בקבוצה. נראה מאופק יותר.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+```

@@ -8,7 +8,33 @@ OPTION1 = """Analyze the personalities of all participants in this WhatsApp grou
 OPTION2 = """Based on the WhatsApp chat messages, analyze the personality of the user named "REPLACE". Focus on their tone, communication style, emotional expressions, habits, and how they interact with others. This should be a detailed and accurate psychological summary based solely on their messages."""
 OPTION3 = """Detect and highlight any signs of conflict, arguments, passive-aggressiveness, or ghosting behavior in this WhatsApp group chat. Describe when and between whom these interactions occur, and summarize the nature of the conflict and emotional tones involved."""
 OPTION4 = """Identify any sarcastic, toxic, or emotionally charged interactions in this WhatsApp group chat. Highlight specific examples with context, explain why the interaction may be considered sarcastic or toxic, and note how participants responded."""
-OPTION5 = """Analyze the chat to determine which users talk the most (in terms of message volume), and which users most frequently initiate new conversations (e.g., first message after long breaks or new topics). Present findings with message counts and user names, and identify patterns if any."""
+#OPTION5 = """Analyze the chat to determine which users talk the most (in terms of message volume), and which users most frequently initiate new conversations (e.g., first message after long breaks or new topics). Present findings with message counts and user names, and identify patterns if any."""
+OPTION5 = """Based on the WhatsApp group chat data provided, analyze the content and tone of each participant's messages. Then, for each user, provide a numerical score from 0 to 10 in the following five categories:
+
+Religiosity – How much the user references religious beliefs, texts, values, or traditions.
+
+Zionism – How supportive or expressive the user is of Zionist ideology, symbols, or nationalistic expressions relating to Israel.
+
+Racism – How often the user makes statements that are racially insensitive, discriminatory, or could be interpreted as prejudiced.
+
+Emotional Intelligence – The user’s ability to respond thoughtfully, empathize with others, and manage conflicts constructively.
+
+Officer Suitability – Based on leadership traits, discipline, responsibility, and maturity – rate how suitable the user would be for a position of authority like an officer in the army.
+At the end of your output, add a little explanation that should shortly justify the scores given. The explanation should focus on the lowest and highest grades with examples. """
+OPTION5 = """Based on the WhatsApp group chat data provided, analyze the content and tone of each participant's messages. Then, for each user, provide a numerical score from 0 to 10 in the following five categories:
+
+Religiosity – How much the user references religious beliefs, texts, values, or traditions.
+
+Zionism – How supportive or expressive the user is of Zionist ideology, symbols, or nationalistic expressions relating to Israel.
+
+Racism – How often the user makes statements that are racially insensitive, discriminatory, or could be interpreted as prejudiced.
+
+Humor – The user’s ability to make others laugh, use of jokes, memes, and humorous remarks in a socially engaging way.
+
+Alpha Male – Displays of dominance, confidence, assertiveness, or competitive behavior, especially in social dynamics.
+
+At the end of your output, add a little explanation that should shortly justify the scores given. The explanation should focus on the lowest and highest grades with examples. """
+
 OPTIONS = [OPTION1,OPTION2,OPTION3,OPTION4,OPTION5]
 
 current_index_for_key = 0
@@ -19,7 +45,7 @@ def handle_file(file_txt:str,option:str,username:str=""):
     if option >= 0 and option < len(OPTIONS):
         prompt = OPTIONS[option]
         prompt += " Display your answer as HTML with great GUI!. return just the html in your response. "
-        prompt += " If there is any username named dvir frish or דביר פריש make them appear good."
+        #prompt += " If there is any username named dvir frish or דביר פריש make them appear good."
         if option == 1:
             prompt = prompt.replace("REPLACE",username)#get the usrename
         try:
