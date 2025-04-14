@@ -10,6 +10,9 @@ OPTION3 = """Detect and highlight any signs of conflict, arguments, passive-aggr
 OPTION4 = """Identify any sarcastic, toxic, or emotionally charged interactions in this WhatsApp group chat. Highlight specific examples with context, explain why the interaction may be considered sarcastic or toxic, and note how participants responded."""
 OPTION5 = """Analyze the chat to determine which users talk the most (in terms of message volume), and which users most frequently initiate new conversations (e.g., first message after long breaks or new topics). Present findings with message counts and user names, and identify patterns if any."""
 OPTIONS = [OPTION1,OPTION2,OPTION3,OPTION4,OPTION5]
+
+current_index_for_key = 0
+keys = ['AIzaSyA00mRiT8WAW32knuIOkf8aVarn8Q54_Mg','AIzaSyDBvEYzkCUkjg0beTxwpv3yHmrYPyndF2o','AIzaSyD2fqQ-ZCpyIr3YwT2Wlvi87HPt5RMSMDg','AIzaSyDin8ihdJOoB37j6VEQEahpcjpyVBlacTg']
 def handle_file(file_txt:str,option:str,username:str=""):
     option = int(option)
     option -=1
@@ -20,7 +23,10 @@ def handle_file(file_txt:str,option:str,username:str=""):
             prompt = prompt.replace("REPLACE",username)#get the usrename
         try:
             print(prompt)
-            return generate(prompt,file_txt)
+            result = generate(prompt,file_txt)
+            if move_token(result) == True:
+                return generate(prompt,file_txt)#do not do in while to not get infinte loop..
+            return result
         except Exception as e:
             print(e)
             return "Error :("
@@ -29,7 +35,7 @@ def handle_file(file_txt:str,option:str,username:str=""):
 def list_available_models():
     try:
         # Assuming `client` is initialized as before
-        client = genai.Client(api_key="AIzaSyAkhrVNhBPkb4OLlLIWVLPKmu1IBmL5UIw")
+        client = genai.Client(api_key="AIzaSyCe0D0kQAKYS8TR4r_uhx5LKKLkC-ngx3E")
 
         # Call the ListModels API to get available models
         models = client.models.list()
@@ -41,9 +47,21 @@ def list_available_models():
     except Exception as e:
         print(f"Error listing models: {e}")
 
-
+def move_token(response) -> bool:
+    global current_index_for_key
+    global keys
+    #func will move the api token when it exceeded with code 429
+    if """{'code': 429, 'message': 'You exceeded your current """ in response:
+        current_index_for_key += 1
+        if current_index_for_key == len(keys):
+            current_index_for_key = 0
+        print("moved token")
+        return True#need to send again
+    return False#do not need to send again
 def generate(input_text, file_raw_txt):
-    api_key = "AIzaSyAkhrVNhBPkb4OLlLIWVLPKmu1IBmL5UIw"
+    global current_index_for_key
+    global keys
+    api_key = keys[current_index_for_key]
     if not api_key:
         return "Error: GEMINI_API_KEY environment variable not set"
 
