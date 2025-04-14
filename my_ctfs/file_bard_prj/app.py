@@ -3,7 +3,7 @@ import time
 import secrets
 import bard_handler
 import os
-from datetime import datetime
+import dates_handler
 import files_handler
 PORT = 5001
 app = Flask(__name__)
@@ -20,52 +20,7 @@ def cut_file(file_content:str):
     return "\n".join(lines[-2000:])#get the last 2000 lines
 
 
-def add_trailing_zeros_for_date(date):
-    try:
-        parts = date.split('.')
-        if len(parts) == 3:
-            day = parts[0].zfill(2)
-            month = parts[1].zfill(2)
-            year = parts[2]
-            return f"{day}.{month}.{year}"
-    except Exception:
-        return ""
 
-def get_msgs_from_specific_dates_range(file_content: str, start_date: str, end_date: str) -> str:
-    in_range = False
-    msgs = file_content.split("\n")
-    updated_msgs = []
-    # Convert input dates to datetime objects
-    try:
-        start = datetime.strptime(start_date, "%d.%m.%Y")
-        end = datetime.strptime(end_date, "%d.%m.%Y")
-    except Exception:
-        return file_content
-
-    for line in msgs:
-        if not line.strip():
-            continue
-        # Assuming each line starts with the date in 'YYYY-MM-DD' format
-        try:
-            line_date_arr = line.split('.') # 'YYYY.MM.DD'
-            try:
-                line_date_arr[2] = line_date_arr[2][:line_date_arr[2].find(",")]
-                line_date_str = line_date_arr[0]+'.'+line_date_arr[1]+'.'+line_date_arr[2]
-            except Exception as e:
-                raise ValueError
-            line_date = datetime.strptime(line_date_str, "%d.%m.%Y")
-            if start <= line_date <= end:
-                in_range = True
-                updated_msgs.append(line)
-            else:
-                in_range = False
-        except ValueError:
-            # Line does not start with a valid date - means that the user typed a new line
-            #we need to check if the previous line was inside the date range...
-            if in_range and len(updated_msgs) > 0:
-                updated_msgs[-1] = updated_msgs[-1]+"\n"+line
-
-    return "\n".join(updated_msgs)
 
 
 
@@ -79,8 +34,8 @@ def upload():
     #for specific dates:
     start_date = request.form.get("startDate","")
     end_date = request.form.get("endDate","")
-    start_date = add_trailing_zeros_for_date(start_date)
-    end_date = add_trailing_zeros_for_date(end_date)
+    start_date = dates_handler.add_trailing_zeros_for_date(start_date)
+    end_date = dates_handler.add_trailing_zeros_for_date(end_date)
 
 
     if not file:
@@ -105,7 +60,7 @@ def reduce_content(original_content,start_date,end_date):
     if start_date == "" or end_date == "":
         return cut_file(original_content)
 
-    updated_content = get_msgs_from_specific_dates_range(original_content,start_date,end_date)
+    updated_content = dates_handler.get_msgs_from_specific_dates_range(original_content,start_date,end_date)
     return cut_file(updated_content)
 def get_answer_from_bard(content,option,username):
     #the 503 is when server is overloaded - we will just keep sending msgs

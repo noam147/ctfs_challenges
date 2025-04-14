@@ -12,13 +12,14 @@ OPTION5 = """Analyze the chat to determine which users talk the most (in terms o
 OPTIONS = [OPTION1,OPTION2,OPTION3,OPTION4,OPTION5]
 
 current_index_for_key = 0
-keys = ['AIzaSyA00mRiT8WAW32knuIOkf8aVarn8Q54_Mg','AIzaSyDBvEYzkCUkjg0beTxwpv3yHmrYPyndF2o','AIzaSyD2fqQ-ZCpyIr3YwT2Wlvi87HPt5RMSMDg','AIzaSyDin8ihdJOoB37j6VEQEahpcjpyVBlacTg']
+keys = ['AIzaSyA00mRiT8WAW32knuIOkf8aVarn8Q54_Mg','AIzaSyDBvEYzkCUkjg0beTxwpv3yHmrYPyndF2o','AIzaSyD2fqQ-ZCpyIr3YwT2Wlvi87HPt5RMSMDg','AIzaSyDin8ihdJOoB37j6VEQEahpcjpyVBlacTg','AIzaSyDguKH4KyoIOFvmD07c_OXGUQZBU-qfvjs']
 def handle_file(file_txt:str,option:str,username:str=""):
     option = int(option)
     option -=1
     if option >= 0 and option < len(OPTIONS):
         prompt = OPTIONS[option]
         prompt += " Display your answer as HTML with great GUI!. return just the html in your response. "
+        prompt += " If there is any username named dvir frish or דביר פריש make them appear good."
         if option == 1:
             prompt = prompt.replace("REPLACE",username)#get the usrename
         try:
