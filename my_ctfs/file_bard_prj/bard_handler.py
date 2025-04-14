@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 #OPTION1 = """Analyze the personalities of all participants in this WhatsApp group chat. Identify key traits, behavioral patterns, communication styles, and any notable social dynamics between members. Provide a summary for each user individually, if possible."""
 #OPTION1 = """Analyze the personalities of all participants in this WhatsApp group chat. Identify key traits, behavioral patterns, communication styles, and any notable social dynamics between members. For each participant, output the result in a JSON object with the fields: name, traits (array of strings), and summary (string). Return the entire response as a JSON array under the key users, and include a status: success and analysis_type: group_summary at the top level."""
-OPTION1 = """Analyze the personalities of all participants in this WhatsApp group chat. Identify key traits, behavioral patterns, communication styles, and any notable social dynamics between members. Provide a summary for each user individually, if possible. Display your answer as HTML with great GUI!. return just the html in your reponse."""
+OPTION1 = """Analyze the personalities of all participants in this WhatsApp group chat. Identify key traits, behavioral patterns, communication styles, and any notable social dynamics between members. Provide a summary for each user individually, if possible."""
 OPTION2 = """Based on the WhatsApp chat messages, analyze the personality of the user named "REPLACE". Focus on their tone, communication style, emotional expressions, habits, and how they interact with others. This should be a detailed and accurate psychological summary based solely on their messages."""
 OPTION3 = """Detect and highlight any signs of conflict, arguments, passive-aggressiveness, or ghosting behavior in this WhatsApp group chat. Describe when and between whom these interactions occur, and summarize the nature of the conflict and emotional tones involved."""
 OPTION4 = """Identify any sarcastic, toxic, or emotionally charged interactions in this WhatsApp group chat. Highlight specific examples with context, explain why the interaction may be considered sarcastic or toxic, and note how participants responded."""
@@ -16,6 +16,7 @@ def handle_file(file_txt:str,option:str,username:str=""):
     option -=1
     if option >= 0 and option < len(OPTIONS):
         prompt = OPTIONS[option]
+        prompt += " Display your answer as HTML with great GUI!. return just the html in your response. "
         if option == 1:
             prompt = prompt.replace("REPLACE",username)#get the usrename
         try:
