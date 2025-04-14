@@ -53,7 +53,7 @@ def generate(input_text, file_raw_txt):
     client = genai.Client(api_key=api_key)
 
     # Prepare the content for the API call
-    model = "gemini-2.0-flash-exp"
+    model = "gemini-2.5-pro-exp-03-25"
     contents = [
         types.Content(
             role="user",
