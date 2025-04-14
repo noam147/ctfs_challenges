@@ -1,0 +1,188 @@
+<h1>OPTION:1</h1><br><h3>Relevant for dates:14.03.2024-14.04.2024</h3><br><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניתוח אישיות קבוצתית</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        .participant-card {
+            background-color: #e9f5ff;
+            border: 1px solid #b3d7ff;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+        .participant-card h3 {
+            color: #004085;
+            margin-top: 0;
+            border-bottom: 1px dashed #004085;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #004085;
+        }
+        .social-dynamics {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .social-dynamics h2 {
+             color: #856404;
+             border-bottom-color: #856404;
+        }
+         .disclaimer {
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ניתוח אישיות קבוצתית - קבוצת WhatsApp</h1>
+        <p>להלן ניתוח אישיותי של המשתתפים הבולטים בקבוצת הווטסאפ, המבוסס אך ורק על תוכן ההודעות שסופק. הניתוח מתמקד בתכונות מפתח, דפוסי התנהגות, סגנונות תקשורת ודינמיקה חברתית נצפית.</p>
+
+        <div class="participant-card">
+            <h3>נועם מרסיאנו (Noam Marciano)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> גבוהה מאוד, משתתף פעיל ומרכזי.</li>
+                <li><strong>נושאים מרכזיים:</strong> שיתוף קישורים (YouTube, הומור, צבא/פוליטיקה), דיונים לימודיים (פיזיקה, תנ"ך), פרויקט טכנולוגי (GitLab, שרת/לקוח), תוצאות פסיכומטרי וקבלה לגאמ"א, יזימת משחקים והתערבויות, דיון באפשרויות צבאיות, הבעת שעמום, מבחן קינן שפי לעתודה.</li>
+                <li><strong>סגנון תקשורת:</strong> אינפורמלי, הומוריסטי, שיתופי (קישורים, מידע), יוזם, לעיתים מביע שעמום ישירות.</li>
+                <li><strong>תכונות בולטות:</strong> פעיל, בעל אוריינטציה טכנולוגית, הומוריסטי, מעורב חברתית, יוזם, נראה החלטי לגבי גאמ"א.</li>
+                <li><strong>תפקיד חברתי:</strong> אחד הקולות הדומיננטיים, מרבה לשתף תוכן ולהתחיל אינטראקציות.</li>
+            </ul>
+        </div>
+
+        <div class="participant-card">
+            <h3>יוסף בוכניק (Yosef Buchnik)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> נמוכה יחסית לקבוצת הליבה.</li>
+                <li><strong>נושאים מרכזיים:</strong> שיתוף מידע על מועדון CyberSec באוניברסיטה, קטעי חדשות (פוליטיקה, ביטחון), דיונים על ביקור בישיבות (מעלה אדומים), נראה רציני יותר ונוטה יותר לנושאים דתיים/לימודיים, בסופו של דבר מחליט לדחות שירות לישיבה.</li>
+                <li><strong>סגנון תקשורת:</strong> אינפורמטיבי, רציני יותר, פחות מעורב בבדיחות קיצוניות.</li>
+                <li><strong>תכונות בולטות:</strong> רציני, ממוקד (טכנולוגיה/דת), אינפורמטיבי, פחות נוטה להומור פרוע, החלטי לגבי דחיית השירות.</li>
+                <li><strong>תפקיד חברתי:</strong> תורם מידע ספציפי, מייצג גישה מעט שונה משאר הליבה.</li>
+            </ul>
+        </div>
+
+        <div class="participant-card">
+            <h3>דביר לא פייר (Dvir Lo Fair)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> גבוהה מאוד, דומיננטי בשיחה.</li>
+                <li><strong>נושאים מרכזיים:</strong> עיסוק אינטנסיבי בשירות הצבאי (עתודה - אלונים/פסגות, צנחנים, פרופיל קרבי גבוה, תסכולים מול מיטב), שיתוף חדשות, מעורבות גבוהה בבדיחות והתגרויות (לדוגמה "אמאשך"), מזכיר עבודה בארומה, קשיים לימודיים (פיזיקה, תנ"ך), משתמש ב-chess.com.</li>
+                <li><strong>סגנון תקשורת:</strong> אינפורמלי מאוד, אקטיבי, מביע רגשות (בעיקר תסכול), הומוריסטי ומתגרה, שאפתני (צבאי), לחוץ (לימודים).</li>
+                <li><strong>תכונות בולטות:</strong> פעיל מאוד, אינטנסיבי, אקספרסיבי, הומוריסטי/מתגרה, אמביציוזי, לחוץ אקדמית.</li>
+                <li><strong>תפקיד חברתי:</strong> קול מרכזי, מניע דיונים (בעיקר צבאיים), שותף מרכזי בבדיחות.</li>
+            </ul>
+        </div>
+
+         <div class="participant-card">
+            <h3>אלישיב ברק (Elishiv Barak)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> גבוהה.</li>
+                <li><strong>נושאים מרכזיים:</strong> שיתוף קישורים (שורטס, לעיתים קרובות עם תוכן קצת חריף/פוליטי), יוזם התגרויות ובדיחות (לעיתים פרובוקטיבי או בהומור עצמי), דיונים על יחידות קרביות וכושר גופני, הערות אירוניות או ביקורתיות על נושאים דתיים/פילוסופיים, התלבטות לגבי דחיית שירות (דוחה לבסוף בלחץ אביו), לחץ לימודי.</li>
+                <li><strong>סגנון תקשורת:</strong> פעיל, פרובוקטיבי, הומוריסטי (לפעמים נושך), מתעניין בכושר, נוטה לביקורתיות, נראה מושפע מהמשפחה.</li>
+                <li><strong>תכונות בולטות:</strong> אקטיבי, פרובוקטיבי, הומוריסטי, בעל אוריינטציה גופנית, ביקורתי, מושפע מהמשפחה.</li>
+                <li><strong>תפקיד חברתי:</strong> קול דומיננטי, מרבה ליזום התגרויות ובדיחות, מביע דעות ייחודיות.</li>
+            </ul>
+        </div>
+
+        <div class="participant-card">
+            <h3>אורי שגיב (Ori Sagiv)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> פעיל.</li>
+                <li><strong>נושאים מרכזיים:</strong> לעיתים משמש כקול ההיגיון או ממתן כשהבדיחות מחריפות, אך גם משתתף בהן. משתף מידע (שיבוצים של חברים), דיון על הפסיכומטרי שלו (אפשרות לשיפור), מפגין ידע על יחידות צבאיות ותהליכים, מעורב בלחץ הלימודי (פיזיקה, תנ"ך), מזכיר שיעורי קלרינט, מעורב בדיון על חשבון דיסקורד.</li>
+                <li><strong>סגנון תקשורת:</strong> מאוזן, אינפורמטיבי, מפגין ידע, לעיתים ממתן, מעורב חברתית ואקדמית.</li>
+                <li><strong>תכונות בולטות:</strong> מאוזן, ידען, לפעמים מתון, מעורב.</li>
+                <li><strong>תפקיד חברתי:</strong> תורם מידע, משתתף בדיונים, לעיתים פועל כממתן.</li>
+            </ul>
+        </div>
+
+         <div class="participant-card">
+            <h3>איל ממן (Eyal Maman)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> פעיל.</li>
+                <li><strong>נושאים מרכזיים:</strong> ביקור במכינה (הפך למקור להתגרויות), עוזב את הקבוצה זמנית עקב התגרויות, ניגש לפסיכומטרי, בעל רכב ומסיע חברים, קשיים לימודיים, משתתף בבדיחות אך מביע אי נוחות לעיתים, מחליט לדחות שירות לישיבה/מכינה, נופל קורבן להודעות הונאה בטלגרם.</li>
+                <li><strong>סגנון תקשורת:</strong> חברתי, רגיש להתגרויות, נייד (רכב), לחוץ אקדמית, נראה החלטי לגבי דחיית השירות.</li>
+                <li><strong>תכונות בולטות:</strong> חברתי, רגיש, נייד, לחוץ אקדמית, החלטי (דח"ש).</li>
+                <li><strong>תפקיד חברתי:</strong> משתתף פעיל, לעיתים מושא להתגרויות, תורם לניידות הקבוצה.</li>
+            </ul>
+        </div>
+
+         <div class="participant-card">
+            <h3>יונתן גוטמן (Yonatan Gottman)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> נמוכה יחסית.</li>
+                <li><strong>נושאים מרכזיים:</strong> שיתוף חדשות (כלב של אסף רפפורט), שאילתות על תוכניות חברתיות (סרטים), לעיתים יש לו גישה לרכב, מספק מידע על זימון צבאי של חבר, מעורב בדיון על חשבון דיסקורד.</li>
+                <li><strong>סגנון תקשורת:</strong> פחות דומיננטי, יוזם קשרים חברתיים, אינפורמטיבי בהודעותיו הספורות.</li>
+                <li><strong>תכונות בולטות:</strong> פריפריאלי יותר, מחבר חברתי, אינפורמטיבי.</li>
+                <li><strong>תפקיד חברתי:</strong> פחות מרכזי, תורם בעיקר בהיבטים חברתיים ומידע נקודתי.</li>
+            </ul>
+        </div>
+
+        <div class="participant-card">
+            <h3>😃 (אריאל / Ariel - משוער)</h3>
+            <ul>
+                <li><strong>תדירות הודעות:</strong> גבוהה מאוד, דמות מרכזית ביותר.</li>
+                <li><strong>נושאים מרכזיים:</strong> מוקד הלחץ האקדמי (סיכומי תנ"ך, קשיי מעבדה בפיזיקה, בקשות עזרה תכופות), שיעורי נהיגה (נכשל בטסט), עיסוק אינטנסיבי בשיבוץ הצבאי (מאוד לא מרוצה מהשיבוץ כטכנאי בחיל האוויר, מנסה לעבור לתקשוב/כלל חמ"ן, מגיש מועמדות לפסגות), שימוש בכלי AI לעזרה, מטרה ותורם לבדיחות והתגרויות, משתף מימים וסיכומים.</li>
+                <li><strong>סגנון תקשורת:</strong> פעיל מאוד, מביע לחץ ודאגה (אקדמית וצבאית), פרואקטיבי בחיפוש עזרה ופתרונות, משתמש בטכנולוגיה (AI), משתתף מרכזי בהומור ובבדיחות.</li>
+                <li><strong>תכונות בולטות:</strong> פעיל מאוד, לחוץ ביותר (אקדמית/צבאית), פרואקטיבי, טכנולוגי, דמות חברתית מרכזית (מושא לבדיחות ודיונים).</li>
+                <li><strong>תפקיד חברתי:</strong> אחד הקולות הדומיננטיים, מוקד דיונים רבים (לימודים, צבא, בדיחות), תורם סיכומים וחומרים.</li>
+            </ul>
+        </div>
+
+        <div class="social-dynamics">
+            <h2>דינמיקה חברתית ותמות מרכזיות</h2>
+            <ul>
+                <li><strong>הומור והתגרויות (Banter):</strong> נפוץ מאוד, לעיתים קרובות חריף או אישי. משמש ככלי מרכזי לאינטראקציה אך יכול לגרום לאי נוחות.</li>
+                <li><strong>לחץ אקדמי וצבאי:</strong> נושאים דומיננטיים המייצרים חוויה משותפת של מתח, דאגה ושאיפה להצלחה. הדיונים על שירות צבאי חושפים מגוון שאיפות וחששות.</li>
+                <li><strong>שיתוף מידע ועזרה הדדית:</strong> למרות ההתגרויות, קיימת נכונות לשתף סיכומים, מידע על תהליכים צבאיים, קישורים ולעיתים להציע עזרה (כמו הסעות).</li>
+                <li><strong>טכנולוגיה ותקשורת דיגיטלית:</strong> שימוש נרחב בקישורים, ממים, כלי AI, ופלטפורמות נוספות (דיסקורד, GitLab).</li>
+                <li><strong>היעדר היררכיה פורמלית:</strong> אין מנהיג מוגדר, אך מספר חברים (נועם, דביר, אלישיב, אריאל) דומיננטיים יותר בשיחה.</li>
+                <li><strong>נושאי שיחה מגוונים:</strong> החל מלימודים וצבא, דרך פוליטיקה ודת (לעיתים באירוניה), ועד לתוכניות חברתיות ובדיחות יומיומיות.</li>
+            </ul>
+        </div>
+
+        <p class="disclaimer">חשוב להדגיש כי ניתוח זה מבוסס אך ורק על התוכן הכתוב בשיחה שסופקה, ואינו משקף בהכרח את מלוא אישיותם או התנהגותם של המשתתפים בהקשרים אחרים.</p>
+    </div>
+</body>
+</html>
+```

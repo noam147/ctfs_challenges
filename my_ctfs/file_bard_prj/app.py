@@ -32,6 +32,7 @@ def add_trailing_zeros_for_date(date):
         return ""
 
 def get_msgs_from_specific_dates_range(file_content: str, start_date: str, end_date: str) -> str:
+    in_range = False
     msgs = file_content.split("\n")
     updated_msgs = []
     # Convert input dates to datetime objects
@@ -46,20 +47,22 @@ def get_msgs_from_specific_dates_range(file_content: str, start_date: str, end_d
             continue
         # Assuming each line starts with the date in 'YYYY-MM-DD' format
         try:
-            print(line)
             line_date_arr = line.split('.') # 'YYYY.MM.DD'
             try:
                 line_date_arr[2] = line_date_arr[2][:line_date_arr[2].find(",")]
                 line_date_str = line_date_arr[0]+'.'+line_date_arr[1]+'.'+line_date_arr[2]
-            except Exception:
-                print(f"on line: {line}")
+            except Exception as e:
                 raise ValueError
             line_date = datetime.strptime(line_date_str, "%d.%m.%Y")
             if start <= line_date <= end:
+                in_range = True
                 updated_msgs.append(line)
+            else:
+                in_range = False
         except ValueError:
             # Line does not start with a valid date - means that the user typed a new line
-            if len(updated_msgs) > 0:
+            #we need to check if the previous line was inside the date range...
+            if in_range and len(updated_msgs) > 0:
                 updated_msgs[-1] = updated_msgs[-1]+"\n"+line
 
     return "\n".join(updated_msgs)
@@ -85,7 +88,6 @@ def upload():
 
     content = file.read().decode('utf-8')
     content = reduce_content(content,start_date,end_date)
-    print("final content is "+content)
     response = get_answer_from_bard(content,option,username)
 
     files_handler.save_response_to_machine(response,option)
@@ -104,7 +106,6 @@ def reduce_content(original_content,start_date,end_date):
         return cut_file(original_content)
 
     updated_content = get_msgs_from_specific_dates_range(original_content,start_date,end_date)
-    print(updated_content)
     return cut_file(updated_content)
 def get_answer_from_bard(content,option,username):
     #the 503 is when server is overloaded - we will just keep sending msgs
