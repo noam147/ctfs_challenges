@@ -96,4 +96,6 @@ def generate(input_text, file_raw_txt):
         return result
 
     except Exception as e:
-        return f"Error generating content: {e}"
+        #return f"Error generating content: {e}"
+        return "Error, try again."
+
