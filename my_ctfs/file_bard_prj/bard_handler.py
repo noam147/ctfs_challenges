@@ -11,7 +11,6 @@ OPTION4 = """Identify any sarcastic, toxic, or emotionally charged interactions 
 OPTION5 = """Analyze the chat to determine which users talk the most (in terms of message volume), and which users most frequently initiate new conversations (e.g., first message after long breaks or new topics). Present findings with message counts and user names, and identify patterns if any."""
 OPTIONS = [OPTION1,OPTION2,OPTION3,OPTION4,OPTION5]
 def handle_file(file_txt:str,option:str,username:str=""):
-    list_available_models()
     option = int(option)
     option -=1
     if option >= 0 and option < len(OPTIONS):
@@ -42,8 +41,6 @@ def list_available_models():
     except Exception as e:
         print(f"Error listing models: {e}")
 
-# Call this function to list available models
-list_available_models()
 
 def generate(input_text, file_raw_txt):
     api_key = "AIzaSyAkhrVNhBPkb4OLlLIWVLPKmu1IBmL5UIw"

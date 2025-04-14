@@ -1,7 +1,9 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,Response, send_from_directory,abort
 import time
 import bard_handler
+import os
 PORT = 5001
+CURRENT_ID = 2
 app = Flask(__name__)
 
 @app.route('/')
@@ -25,7 +27,33 @@ def upload():
     content = file.read().decode('utf-8')
     content = cut_file(content)
     response = bard_handler.handle_file(content,option,username)
+    save_response_to_machine(response,option)
     return response
+
+@app.route('/response/<id>', methods=['GET'])
+def get_file(id):
+    folder_path = 'responses'
+    filename = f'res{id}.txt'
+    file_path = os.path.join(folder_path, filename)
+
+    if not os.path.exists(file_path):
+        return abort(404, description="File not found")
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+
+    return Response(html_content, mimetype='text/html')
+def save_response_to_machine(content_from_bard,option):
+    global CURRENT_ID
+    folder_path = "responses"
+    file_path = os.path.join(folder_path, f"res{CURRENT_ID}.txt")
+    CURRENT_ID += 1
+    os.makedirs(folder_path, exist_ok=True)
+
+    file_text = f"<h1>OPTION:{option}</h1><br>{content_from_bard}"
+    with open(file_path,"w",encoding="utf-8") as f:
+        f.write(file_text)
+
 
 
 if __name__ == '__main__':
