@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template,Response, send_from_directory,abort
+from flask import Flask,url_for, request, render_template,Response, send_from_directory,abort
 import time
 import secrets
 import bard_handler
@@ -112,6 +112,23 @@ def get_answer_from_bard(content,option,username):
     while response.find("""{'error': {'code': 503, 'message': """) != -1:
         response = bard_handler.handle_file(content, option, username)
     return response
+
+@app.route('/responses', methods=['GET'])
+def list_files():
+    folder_path = 'responses'
+    if not os.path.exists(folder_path):
+        return abort(404, description="Folder not found")
+
+    files = [f for f in os.listdir(folder_path) if f.startswith('res') and f.endswith('.txt')]
+
+    html = "<h1>Available Response Files</h1><ul>"
+    for file in files:
+        file_id = file[3:-4]  # strip "res" prefix and ".txt" suffix
+        link = url_for('get_file', id=file_id)
+        html += f'<li><a href="{link}">{file}</a></li>'
+    html += "</ul>"
+
+    return Response(html, mimetype='text/html')
 @app.route('/response/<id>', methods=['GET'])
 def get_file(id):
     folder_path = 'responses'
