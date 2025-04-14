@@ -39,6 +39,11 @@
       max-width: 300px;
       box-sizing: border-box;
     }
+    #dateInputs input {
+      padding: 0.5rem;
+      width: 150px;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -71,6 +76,14 @@
       <input type="text" id="username" name="username" placeholder="Enter specific username (case-sensitive, as it appears in the chat)" />
     </div>
 
+    <div class="option-group">
+      <label><input type="checkbox" id="dateRangeToggle"> Analyze specific date range</label>
+      <div id="dateInputs" style="display: none; margin-top: 1rem;">
+        <label>From: <input type="text" id="startDate" name="startDate" placeholder="dd/mm/yyyy" /></label><br><br>
+        <label>Until: <input type="text" id="endDate" name="endDate" placeholder="dd/mm/yyyy" /></label>
+      </div>
+    </div>
+
     <br>
     <input type="file" id="chatfile" name="chatfile" accept=".txt" required />
     <br><br>
@@ -97,6 +110,32 @@
       });
     });
 
+    const dateToggle = document.getElementById('dateRangeToggle');
+    const dateInputs = document.getElementById('dateInputs');
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+
+    function getTodayDate() {
+      const today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const yyyy = today.getFullYear();
+      return `${dd}.${mm}.${yyyy}`;
+    }
+
+    dateToggle.addEventListener('change', () => {
+      if (dateToggle.checked) {
+        dateInputs.style.display = 'block';
+        const today = getTodayDate();
+        startDateInput.value = today;
+        endDateInput.value = today;
+      } else {
+        dateInputs.style.display = 'none';
+        startDateInput.value = '';
+        endDateInput.value = '';
+      }
+    });
+
     document.getElementById('uploadForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -112,6 +151,10 @@
       formData.append('option', selectedOption);
       if (selectedOption === '2') {
         formData.append('username', username);
+      }
+      if (dateToggle.checked) {
+        formData.append('startDate', startDateInput.value);
+        formData.append('endDate', endDateInput.value);
       }
 
       document.getElementById('uploadForm').style.display = 'none';

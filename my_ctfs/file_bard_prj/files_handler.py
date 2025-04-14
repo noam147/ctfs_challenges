@@ -1,3 +1,5 @@
+import os
+CURRENT_ID = 0
 def save_response_to_machine(content_from_bard,option):
     global CURRENT_ID
     folder_path = "responses"
@@ -12,7 +14,6 @@ def save_response_to_machine_user_mode(content_from_bard,option,fileid):
     folder_path = "user_responses"
     file_path = os.path.join(folder_path, f"{fileid}.txt")
     os.makedirs(folder_path, exist_ok=True)
-
     file_text = f"<h1>OPTION:{option}</h1><br>{content_from_bard}"
     with open(file_path,"w",encoding="utf-8") as f:
         f.write(file_text)
@@ -25,3 +26,6 @@ def count_files_in_folder(folder_path):
     except Exception as e:
         print(f"An error occurred: {e}")
         return 0
+def set_current_id():
+    global CURRENT_ID
+    CURRENT_ID = count_files_in_folder("responses")

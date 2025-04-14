@@ -1,0 +1,171 @@
+<h1>OPTION:1</h1><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניתוח אישיות - שיחת וואטסאפ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #128C7E; /* WhatsApp Green */
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .user-card {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .user-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .user-card h2 {
+            color: #075E54; /* Darker WhatsApp Green */
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #25D366; /* Lighter WhatsApp Green */
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .user-card h3 {
+            color: #128C7E;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .user-card p, .user-card ul {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .user-card ul {
+            padding-right: 20px; /* Adjust for RTL list indentation */
+            list-style-type: disc; /* Changed from 'none' to standard list */
+            margin: 0; /* Removed default margins */
+        }
+
+         .user-card li {
+             margin-bottom: 8px;
+         }
+
+        .dynamics {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .dynamics h2 {
+            color: #075E54;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+         .dynamics p {
+             background-color: #e6fffa;
+             border-right: 5px solid #128C7E; /* Changed from left to right for RTL */
+             padding: 15px;
+             border-radius: 5px;
+             color: #333;
+         }
+
+         /* RTL adjustments */
+         ul {
+             padding-right: 20px;
+             padding-left: 0;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ניתוח אישיות ודינמיקה קבוצתית</h1>
+
+        <div class="user-card">
+            <h2>נועם מרסיאנו</h2>
+
+            <h3>תכונות עיקריות</h3>
+            <ul>
+                <li><strong>סקרן ואנליטי:</strong> מרבה לשאול שאלות (על ציונים, תוכניות, משמעות אירועים, פרשנות דתית), מנסה להבין לעומק, מנתח תגובות וסטטוסים של שירי.</li>
+                <li><strong>משתף ופתוח (יחסית):</strong> חולק פרטים מחייו (בגרויות, נהיגה, משפחה, התלבטויות לגבי עבודה/שירות, חוויות חברתיות).</li>
+                <li><strong>רפלקטיבי ולעיתים חסר ביטחון:</strong> מהרהר במשמעות של אירועים ואינטראקציות ("אדיש", "חשבונות שמיים"), מבקש אישור או דעה נוספת (בכתיבת השיר למרינה, בשאלות קיומיות).</li>
+                <li><strong>אחראי ומעשי:</strong> דואג לבגרויות, לרישיון, לענייני בטיחות ברכב, לפסיכומטרי. חושש מהשלכות פליליות (פריצה לאינסטגרם).</li>
+                <li><strong>בעל חוש הומור יבש/עוקצני לעיתים:</strong> מתבדח על נהיגה, על "חיים", על סיטואציות.</li>
+                 <li><strong>מתעניין בנושאים פילוסופיים/דתיים:</strong> מעלה שאלות עומק על שכר ועונש, ציונות ודת, משמעות.</li>
+            </ul>
+
+            <h3>סגנון תקשורת</h3>
+            <ul>
+                <li><strong>יוזם שיחה:</strong> פותח נושאים רבים, שואל שאלות ישירות.</li>
+                <li><strong>טקסטואלי בעיקר:</strong> מתבסס על הודעות טקסט כתובות, משתמש באימוג'ים להבעת רגש (`😂`, `🙏🏻`, `😮‍💨`, `💀`).</li>
+                <li><strong>נוטה לפרט ולהסביר:</strong> מרחיב במחשבותיו ובחוויותיו.</li>
+                <li><strong>מתעכב על פרטים:</strong> לפעמים מתמקד בנקודות ששירי רואה כשוליות (ניסוח מדויק, פרשנות אימוג'י).</li>
+                <li><strong>מתמיד:</strong> חוזר על שאלות שלא נענו (כמו הציון בבגרות).</li>
+            </ul>
+        </div>
+
+        <div class="user-card">
+            <h2>שירי</h2>
+
+            <h3>תכונות עיקריות</h3>
+            <ul>
+                <li><strong>חברותית ופעילה חברתית:</strong> מעורבת מאוד במסגרות החברתיות שלה (אולפנה, בני עקיבא - חב"ב, ועידה, שירות לאומי עתידי).</li>
+                <li><strong>אקספרסיבית רגשית (דרך מדיה):</strong> מרבה להשתמש בצחוק (`חחח`), אימוג'ים, הודעות קוליות ותמונות (שתוכנן לא ידוע) להבעת רגשות ומצבים.</li>
+                <li><strong>קלילה והומוריסטית:</strong> מגיבה לרוב בקלילות, בצחוק, משתמשת בסלנג ("דפאק", "פיפי", "מתה").</li>
+                <li><strong>שומרת על גבולות / מתחמקת לעיתים:</strong> נוטה לענות בכלליות או להתחמק משאלות ישירות או עמוקות (ציון בבגרות, שאלות דתיות מורכבות - "חשבונות שמיים").</li>
+                <li><strong>מעשית ומאורגנת (בתחומה):</strong> מתמודדת עם בגרויות, רישיון נהיגה, ארגון פעילויות חברתיות (שבת חב"ב), סוגרת שירות לאומי.</li>
+                <li><strong>בעלת עולם ערכים מוגדר:</strong> מחוברת לזהות הדתית-לאומית (בני עקיבא, ציונות ודת כמשולבים).</li>
+                 <li><strong>לעיתים אימפולסיבית או פחות מרוכזת:</strong> מודה שהעתיקה במבחן, לא תמיד עונה ישירות, עוסקת בטלפון בזמן נהיגה (גם אם בחניה).</li>
+            </ul>
+
+            <h3>סגנון תקשורת</h3>
+            <ul>
+                <li><strong>תגובתית לרוב:</strong> מגיבה הרבה ליוזמות של נועם.</li>
+                <li><strong>שימוש נרחב במדיה:</strong> הודעות קוליות, תמונות, סטיקרים ואימוג'ים הם חלק מרכזי בתקשורת שלה.</li>
+                <li><strong>תמציתית בדיבור הישיר:</strong> התשובות הכתובות שלה לעיתים קצרות או כלליות.</li>
+                <li><strong>שימוש רב בצחוק:</strong> "חחח" משמש להבעת שעשוע, מבוכה, או כדרך לרכך תשובה או התחמקות.</li>
+                <li><strong>משתפת בחוויות:</strong> מעדכנת על אירועים מחייה (בגרויות, פעילויות חברתיות, נהיגה).</li>
+            </ul>
+        </div>
+
+        <div class="dynamics">
+            <h2>דינמיקה חברתית</h2>
+            <p>
+                הדינמיקה בין נועם לשירי היא חברית ונינוחה, עם מאפיינים של קשר קרוב המאפשר שיח על מגוון נושאים, מקלילים ויומיומיים (לימודים, נהיגה) ועד עמוקים יותר (דת, ערכים, התלבטויות אישיות). נועם הוא לרוב היוזם והשואל, המנסה להבין ולנתח, בעוד שירי היא המגיבה, המשתפת בחוויותיה ולעיתים שומרת על עמימות מסוימת. יש ביניהם הומור הדדי ועקיצות קלות (בעיקר סביב נושא הנהיגה או הנטייה של נועם לנתח דברים). ניכר כי נועם רואה בשירי חברה קרובה ופונה אליה לקבלת עזרה (מתמטיקה, כתיבת שיר) ודעה, בעוד שירי רואה בו חבר טוב אך שומרת על גבולות ברורים יותר בשיח על נושאים מסוימים, לעיתים משתמשת בהומור או במדיה כדי לנווט את השיחה. למרות השוני בסגנונות התקשורת והעיסוק בפרטים, הקשר נראה יציב וחיובי.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+```

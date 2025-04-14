@@ -51,7 +51,7 @@ def move_token(response) -> bool:
     global current_index_for_key
     global keys
     #func will move the api token when it exceeded with code 429
-    if """{'code': 429, 'message': 'You exceeded your current """ in response:
+    if response.find("{'code': 429, 'message': 'You exceeded your current") != -1:
         current_index_for_key += 1
         if current_index_for_key == len(keys):
             current_index_for_key = 0
@@ -96,6 +96,7 @@ def generate(input_text, file_raw_txt):
         return result
 
     except Exception as e:
-        #return f"Error generating content: {e}"
-        return "Error, try again."
+        print(e)
+        return str(e)
+        #return "Error, try again."
 
