@@ -1,0 +1,173 @@
+<h1>OPTION:3</h1><br>```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניתוח אינטראקציות בשיחת וואטסאפ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .interaction-card {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: .375rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        }
+        .card-header {
+            background-color: #e9ecef;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #dee2e6;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-body {
+            padding: 1.25rem;
+        }
+        .conflict { border-left: 5px solid #dc3545; } /* אדום לקונפליקט */
+        .passive-aggressive { border-left: 5px solid #ffc107; } /* צהוב לפאסיב-אגרסיב */
+        .ghosting { border-left: 5px solid #6c757d; } /* אפור להתעלמות */
+        .frustration { border-left: 5px solid #fd7e14; } /* כתום לתסכול */
+        .philosophical { border-left: 5px solid #0dcaf0; } /* תכלת לוויכוח פילוסופי/רגשי */
+
+        .badge {
+            font-size: 0.8em;
+            padding: 0.4em 0.6em;
+        }
+        h1, h2 {
+             font-weight: 700;
+             color: #343a40;
+        }
+         h1 {
+             text-align: center;
+             margin-bottom: 30px;
+         }
+         h2 {
+             margin-top: 30px;
+             margin-bottom: 15px;
+             border-bottom: 2px solid #0d6efd;
+             padding-bottom: 5px;
+         }
+        .participants { font-style: italic; color: #6c757d; }
+        .summary-nature { margin-top: 10px; }
+        .emotional-tone { font-weight: 600; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ניתוח אינטראקציות בין נועם לשירי</h1>
+
+        <div class="alert alert-info" role="alert">
+            <strong>הערה כללית:</strong> רוב השיחה מתנהלת באווירה ידידותית וכוללת בדיחות פנימיות, עקיצות הדדיות והומור. המקרים המודגשים להלן מייצגים רגעים נקודתיים של חיכוך, אי הבנה, תסכול או התעלמות, אך אינם בהכרח מעידים על קונפליקט עמוק.
+        </div>
+
+        <h2><span class="badge bg-secondary">התעלמות / הימנעות (Ghosting/Avoidance)</span></h2>
+        <div class="interaction-card ghosting">
+            <div class="card-header">
+                <span>שאלות חוזרות על ציון הבגרות של שירי</span>
+                <span class="badge bg-secondary">התעלמות</span>
+            </div>
+            <div class="card-body">
+                <p class="participants">בין: נועם (שואל) ושירי (מתחמקת)</p>
+                <p><strong>תאריכים:</strong> 21.1.2025 - 23.1.2025</p>
+                <div class="summary-nature">
+                    <p>נועם שואל את שירי מספר פעמים (במרומז ובפירוש) לגבי הציון שלה במגן/בגרות במתמטיקה (למשל 21.1 12:53, 22.1 13:18). שירי עונה בצחוק, מתחמקת, מחליפה נושא (למשל לשירים שכתבה, לבקשת עזרה בתרגיל אחר), או שואלת אותו בחזרה מבלי לענות ישירות. נועם מבטא תסכול קל מההתחמקות ("בסוף כזה אני אגלה רק אחרי הבגרות תציון", 22.1 13:16 "לא עניתי כל-כך כי הייתי עסוק בשירים"). ב-23.1 (23:40) נועם מציין במפורש ששירי לא ענתה לו לגבי הבגרות ("תמסרי לשירי שהיא לא אמרה לי איך היה בבגרות ווואלה לא מכבד").</p>
+                </div>
+                <p class="emotional-tone">טון: נועם - סקרנות שהופכת לתסכול קל; שירי - התחמקות הומוריסטית/נבוכה.</p>
+            </div>
+        </div>
+
+         <h2><span class="badge bg-danger">קונפליקט / ויכוח</span></h2>
+         <div class="interaction-card conflict">
+             <div class="card-header">
+                <span>ויכוח על הגדרת "עוטף עזה" ואדישות</span>
+                <span class="badge bg-danger">קונפליקט</span>
+             </div>
+             <div class="card-body">
+                <p class="participants">בין: נועם ושירי</p>
+                <p><strong>תאריך:</strong> 9.2.2025</p>
+                <div class="summary-nature">
+                    <p>נועם מתייחס לאשקלון כ"עוטף", שירי מתקנת אותו בנחרצות ("ידפוק", "אנחנו לא"). נועם מגן על עמדתו ("מבחינת גאוגרפיה ממש צדקתי"). הדיון מתפתח לכך ששירי מכנה את נועם "חסר טקט" באופן מרומז ואז "אדיש" ("כי את אדוש", "אתה אדיש"). נועם מביע אי נוחות מהכינוי ("די את מוציאה אותי אוטיסט", "כאילו אני מבין שזה לא בא להעליב אבל זה קצת מעליב").</p>
+                 </div>
+                <p class="emotional-tone">טון: מתחיל כוויכוח עובדתי, הופך לרגשי יותר עם שימוש בכינויים והבעת פגיעה/אי נוחות.</p>
+             </div>
+         </div>
+
+        <h2><span class="badge bg-info">חילוקי דעות פילוסופיים / רגשיים ותסכול</span></h2>
+        <div class="interaction-card philosophical">
+            <div class="card-header">
+                <span>דיון על "הרוגי מלכות" ושכר ועונש</span>
+                <span class="badge bg-info">דיון רגשי/פילוסופי</span>
+            </div>
+            <div class="card-body">
+                <p class="participants">בין: נועם ושירי</p>
+                <p><strong>תאריך:</strong> 11.3.2025</p>
+                <div class="summary-nature">
+                    <p>בעקבות דיון על סטיקרים של נופלים, נועם מעלה שאלות פילוסופיות נוקבות לגבי הרעיון של "הרוגי מלכות", שכר ועונש בעולם הבא, והאם מוות על קידוש ה' מכפר על חיים של חטאים. שירי מספקת תשובות מהמסורת אך לבסוף נסוגה ל"חשבונות שמיים". נועם מביע תסכול וחוסר שביעות רצון מהתשובות ("אני ממש לא מאמין לזה", "עדיף לי בתור מישהו בנובה לההרג ולקבל תגןעדן").</p>
+                </div>
+                <p class="emotional-tone">טון: נועם - ספקני, מחפש תשובות לוגיות, מתוסכל מחוסר הבהירות; שירי - מסבירה מהידע הדתי שלה, אך מודה במגבלות הידיעה האנושית.</p>
+            </div>
+        </div>
+
+        <div class="interaction-card philosophical">
+            <div class="card-header">
+                <span>דיון על לבישת מכנסיים ושכר ועונש (המשך)</span>
+                 <span class="badge bg-info">דיון רגשי/פילוסופי</span>
+            </div>
+            <div class="card-body">
+                <p class="participants">בין: נועם ושירי</p>
+                <p><strong>תאריכים:</strong> 29.3.2025 - 30.3.2025</p>
+                <div class="summary-nature">
+                    <p>הדיון על שכר ועונש ו"חשבונות שמיים" עולה שוב בהקשר של לבוש (מכנסיים מול חצאית). נועם שואל אם שירי עם חצאית תקבל "יותר גן עדן". שירי שוב מציינת שזה "חשבונות שמיים". נועם מביע ייאוש ממציאת תשובות ("כעיקרון אני כבר התייאשתי מלחפש תשובות").</p>
+                </div>
+                <p class="emotional-tone">טון: דומה לדיון הקודם - נועם מחפש ודאות ומביע תסכול, שירי עומדת על כך שדברים מסוימים אינם ניתנים לידיעה מוחלטת.</p>
+            </div>
+        </div>
+
+         <h2><span class="badge bg-warning text-dark">פאסיב-אגרסיב / תסכול קל</span></h2>
+         <div class="interaction-card passive-aggressive">
+             <div class="card-header">
+                <span>תסכול לגבי אי-קבלת רישיון נהיגה</span>
+                 <span class="badge bg-warning text-dark">תסכול</span>
+            </div>
+            <div class="card-body">
+                <p class="participants">בין: שירי (מתוסכלת) ונועם</p>
+                <p><strong>תאריך:</strong> 9.3.2025</p>
+                 <div class="summary-nature">
+                    <p>נועם מציין שקיבל את הרישיון שלו. שירי מגיבה בתסכול רב ("אני שונאת אתכםםםם", "למה כל מי שעבר אחריי קיבל את זה בדוארררר"). נועם מגיב בהבנה אך גם בעקיצה קלה ("את זה תגידי לשוטר").</p>
+                </div>
+                <p class="emotional-tone">טון: שירי - תסכול ברור; נועם - הבנה עם קורטוב של עקיצה.</p>
+            </div>
+         </div>
+
+        <div class="interaction-card passive-aggressive">
+            <div class="card-header">
+                <span>הערה על וי אפור (Grey Ticks)</span>
+                 <span class="badge bg-warning text-dark">תסכול קל</span>
+            </div>
+            <div class="card-body">
+                <p class="participants">בין: נועם (מביע תסכול כללי)</p>
+                 <p><strong>תאריך:</strong> 25.1.2025</p>
+                <div class="summary-nature">
+                    <p>נועם מביע תסכול כללי מהמשמעות של וי אפור בוואטסאפ ("את יודעת מה הבעיה בוי אפור", "שאני תמיד יוצא מנקודת הנחה שאת קוראת ומסננת", "אבל אפעם אי אפשר לדעת באמת"). זו לא האשמה ישירה של שירי, אלא תסכול מהטכנולוגיה וחוסר הוודאות שהיא יוצרת, שעלול להיווצר גם מול שירי.</p>
+                 </div>
+                <p class="emotional-tone">טון: תסכול כללי מחוסר ודאות תקשורתית.</p>
+             </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
