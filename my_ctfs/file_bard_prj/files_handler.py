@@ -1,5 +1,20 @@
 import os
+import zipfile
+import io
 CURRENT_ID = 0
+
+def is_zip(file) -> bool:
+    return file and file.filename.endswith('.zip')
+def get_txt_from_zip(file):
+    zip_file = zipfile.ZipFile(file.stream)
+    # Find the first .txt file in the archive
+    for name in zip_file.namelist():
+        if name.endswith('.txt'):
+            # Extract the first .txt file content
+            txt_file = zip_file.open(name)
+            return txt_file
+
+    return None
 def save_response_to_machine(content_from_bard,option):
     global CURRENT_ID
     folder_path = "responses"

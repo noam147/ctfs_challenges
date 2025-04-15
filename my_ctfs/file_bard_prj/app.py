@@ -6,6 +6,7 @@ import os
 import dates_handler
 import files_handler
 PORT = 5001
+LINES_PER_REQ = 20_000
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,9 +16,9 @@ def cut_file(file_content:str):
     """func will reduce the size of content for better time running
     conditions are - last 2,000 lines"""
     lines = file_content.split("\n")
-    if len(lines) < 2000:
+    if len(lines) < LINES_PER_REQ:
         return file_content
-    return "\n".join(lines[-2000:])#get the last 2000 lines
+    return "\n".join(lines[-LINES_PER_REQ:])#get the last 2000 lines
 
 
 
@@ -37,7 +38,8 @@ def upload():
     start_date = dates_handler.add_trailing_zeros_for_date(start_date)
     end_date = dates_handler.add_trailing_zeros_for_date(end_date)
 
-
+    if files_handler.is_zip(file):
+        file = files_handler.get_txt_from_zip(file)
     if not file:
         return jsonify({'success':False,'link':""})
 
@@ -59,7 +61,7 @@ def upload():
     return jsonify({'success':True,'link':"/user_response/"+current_file_id_usermode})
 
 def reduce_content(original_content,start_date,end_date):
-    if start_date == "" or end_date == "":
+    if start_date == None or start_date == "" or end_date == "":
         return cut_file(original_content)
 
     updated_content = dates_handler.get_msgs_from_specific_dates_range(original_content,start_date,end_date)
