@@ -46,6 +46,8 @@ def upload():
     content = file.read().decode('utf-8')
     content = reduce_content(content,start_date,end_date)
     response = get_answer_from_bard(content,option,username)
+    if response == "SKIP":
+        return jsonify({'success':False,'link':""})
     current_file_id_usermode = generate_random_str()
     response = (f"<h4>your personal link for sharing: <a href=/user_response/{current_file_id_usermode}>http://13.51.79.222:5001/user_response/{current_file_id_usermode}</a></h4><br>"
                 + response)
@@ -71,6 +73,8 @@ def get_answer_from_bard(content,option,username):
     response = """{'error': {'code': 503, 'message': """
     while response.find("""{'error': {'code': 503, 'message': """) != -1:
         response = bard_handler.handle_file(content, option, username)
+    if response.find("""{'error': {'code': 429, 'message': """) != -1:
+        return "SKIP"
     return response
 
 @app.route('/responses', methods=['GET'])
