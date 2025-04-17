@@ -1,0 +1,138 @@
+<h1>OPTION:2</h1><br><h4>your personal link for sharing: <a href=/user_response/89ed5945fd8e7aea6a3d6cf2ddebf938>http://13.51.79.222:5001/user_response/89ed5945fd8e7aea6a3d6cf2ddebf938</a></h4><br>```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personality Analysis of שירי</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.analysis-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+}
+
+h2 {
+    color: #0056b3;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.trait {
+    margin-bottom: 15px;
+}
+
+.trait-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.trait-description {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    color: #777;
+    margin-left: 30px;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+</style>
+</head>
+<body>
+
+<div class="analysis-container">
+    <h1>Personality Analysis of שירי</h1>
+
+    <div class="trait">
+        <h2 class="trait-name">Humorous and Sarcastic</h2>
+        <div class="trait-description">
+            שירי frequently uses humor and sarcasm in her communication. This is evident in her playful banter with נועם, often employing teasing and light-hearted mockery. Her use of "חחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחח" and "חיח" suggests a light and jovial disposition, even in the face of serious or mundane topics. She uses humor to deflect serious questions or to lighten the mood of the conversation.
+            <p class="quote">"חחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחח אני לא צריכה לחכות ל18 אם אני ארצה פעם לשלות אלכוהול נועם"</p>
+            <p class="quote">"חחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחח" אני לא צריכה לחכות ל18 אם אני ארצה פעם לשלות אלכוהול נועם"</p>
+            <p class="quote">"חחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחחח" אני לא צריכה לחכות ל18 אם אני ארצה פעם לשלות אלכוהול נועם"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Independent and Self-Assured</h2>
+        <div class="trait-description">
+            שירי exhibits a strong sense of independence and self-assurance. She is confident in her decisions and actions, often dismissing external opinions or pressures. This is shown in her interactions with נועם, where she confidently states her views and choices, even when they are challenged. Her directness and lack of hesitation in expressing her opinions further highlight this trait.
+            <p class="quote">"סומכת עליך שתשרוד😊"</p>
+            <p class="quote">"החלטה שלך"</p>
+            <p class="quote">"אני יודעת"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Playful and Teasing</h2>
+        <div class="trait-description">
+            שירי engages in playful teasing, particularly with נועם. She enjoys bantering and often uses playful insults and challenges as a form of interaction. This is evident in her teasing remarks about נועם's age, driving skills, and musical abilities. This playful teasing suggests a comfortable and informal relationship with נועם.
+            <p class="quote">"ילד כאפות"</p>
+            <p class="quote">"טיפש"</p>
+            <p class="quote">"גמד"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Direct and Assertive Communication</h2>
+        <div class="trait-description">
+            שירי's communication style is direct and assertive. She is not afraid to state her mind and often uses imperative sentences, especially when interacting with נועם. She is clear about her needs and expectations and does not shy away from expressing her opinions or disagreements directly.
+            <p class="quote">"תתמודד"</p>
+            <p class="quote">"שתוק"</p>
+            <p class="quote">"תירשם"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Resilient and Pragmatic</h2>
+        <div class="trait-description">
+            Despite her playful and teasing nature, שירי also demonstrates resilience and pragmatism. She takes challenges and setbacks in stride, often responding with a "לא נורא" attitude.  When faced with difficulties, like a poor grade, she acknowledges it but quickly looks for solutions or moves on, indicating a practical approach to life's challenges.
+            <p class="quote">"לא נורא"</p>
+            <p class="quote">"עובר לי"</p>
+            <p class="quote">"זה בסדר גמור"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Engaging and Interactive</h2>
+        <div class="trait-description">
+            שירי is highly engaging in conversations, especially with נועם. She actively participates, asks questions, and responds promptly, even at late hours. Her messages are often filled with emojis and playful language, indicating a desire for lively and interactive communication. She also initiates conversations and keeps them going by posing questions and reacting to נועם’s messages.
+            <p class="quote">"מה"</p>
+            <p class="quote">"נועם"</p>
+            <p class="quote">"מה אתה רוצהה"</p>
+        </div>
+    </div>
+
+    <div class="trait">
+        <h2 class="trait-name">Implied Affection (with Nuham)</h2>
+        <div class="trait-description">
+            Although often teasing and sometimes seemingly dismissive towards נועם, there is an underlying tone of affection in her interactions with him. This is subtly expressed through her consistent engagement in their long, back-and-forth conversations, her playful teasing, and her willingness to help him despite her playful complaints. This suggests a close, albeit playfully contentious, bond between them.
+             <p class="quote">"תודה"</p>
+             <p class="quote">"סבבה"</p>
+             <p class="quote">"יופי"</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+```
