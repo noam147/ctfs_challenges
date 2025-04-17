@@ -1,0 +1,86 @@
+<h1>OPTION:2</h1><br><h4>your personal link for sharing: <a href=/user_response/2a5a4c3aa9eaac65b88da4c5fef83817>http://13.51.79.222:5001/user_response/2a5a4c3aa9eaac65b88da4c5fef83817</a></h4><br>```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Profile of Yosef Buchnik</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .profile-section { margin-bottom: 15px; padding: 10px; border: 1px solid #eee; border-radius: 5px; }
+        .section-title { font-weight: bold; margin-bottom: 5px; }
+        .quote { font-style: italic; color: #777; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Psychological Profile of Yosef Buchnik</h1>
+
+    <div class="profile-section">
+        <h2 class="section-title">Overall Tone and Communication Style</h2>
+        <p>
+            Yosef Buchnik's messages generally exhibit a somewhat reserved and understated tone. He tends to communicate concisely and directly, often in short sentences. His language is generally formal and avoids excessive slang or informal expressions common among other group members. He uses emojis sparingly, primarily to emphasize emotional states or reactions in a subtle way.
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: לאדע סתם היה משעמם"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: מממ, אני שורד"
+        </p>
+    </div>
+
+    <div class="profile-section">
+        <h2 class="section-title">Emotional Expressions</h2>
+        <p>
+            Yosef's emotional expressions are often muted or implied rather than explicitly stated. He occasionally uses emojis like 😢, 😮‍💨, and 😱, but these are used to convey mild disappointment, relief, or surprise rather than strong emotional outbursts. His emotional state often needs to be inferred from the context of his messages. There's a sense of resignation or subdued humor in some of his reactions, particularly concerning his Yeshiva experience and military service.
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: עוד לא היה😢"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: ברוך השם😮‍💨"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: שוק😵😵😵😵"
+        </p>
+    </div>
+
+    <div class="profile-section">
+        <h2 class="section-title">Interaction with Others</h2>
+        <p>
+            Yosef's interactions within the group are less frequent compared to some other members. He often responds to direct questions or prompts from others. His interactions are generally reactive rather than proactive in initiating conversations. He shows a willingness to participate in group activities, such as attending Yeshiva or considering Bar Ilan University, but also expresses skepticism or resignation about these experiences. He engages in some light banter but tends to avoid the more intense or provocative joking that characterizes other members' interactions. He occasionally seeks validation or reassurance from the group, particularly regarding his performance in religious studies or his decisions about military service.
+        </p>
+        <p class="quote">
+            "אלישיב ברק: באיזה ישיבה אתה עכשיו יוסוף? @972553085665"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: מממ, אני שורד"
+        </p>
+        <p class="quote">
+             "אריאל יושעי: תנשאר?
+כאילו לכמה ימים"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: תנשאר?"
+        </p>
+    </div>
+
+    <div class="profile-section">
+        <h2 class="section-title">Habits and Recurring Themes</h2>
+        <p>
+            A recurring theme in Yosef's messages is his attendance at Yeshiva and his fluctuating experiences there, from boredom to mild enjoyment.  He expresses a sense of duty or obligation regarding religious studies, as seen in his questions about the Tanakh exam. Military service is another recurring topic, particularly in relation to deferment and his potential placement in the army. He mentions Bar Ilan University, suggesting consideration of academic pursuits. There is an underlying thread of self-deprecation or lack of confidence, particularly when comparing himself to others in the group or expressing concerns about his performance.
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: לימוד תורה זה משעמם?????????"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: ואז הם תוהים למה אנשים משתמטים"
+        </p>
+        <p class="quote">
+            "יוסף בוכניק: אם ככה כל הישיבות נראלי אני הולך לצבא"
+        </p>
+    </div>
+
+</body>
+</html>
+```
