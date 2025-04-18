@@ -24,7 +24,10 @@ def hash():
 def secret():
     with open("secret.png","rb") as f:
         return f.read()
-    return render_template('windows_di.html')
+@app.route('/choir.mp3')
+def choir():
+    with open("choir.mp3","rb") as f:
+        return f.read()
 @app.route('/windows_di.html')
 def windows():
     return render_template('windows_di.html')

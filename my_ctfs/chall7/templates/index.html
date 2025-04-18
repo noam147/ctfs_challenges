@@ -65,6 +65,28 @@
       padding: 10px;
       font-size: 0.9em;
     }
+	#playButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 20px 35px;
+  background-color: #ffdd00;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 221, 0, 0.6);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+#playButton:hover {
+  background-color: #fff200;
+  box-shadow: 0 0 25px rgba(255, 221, 0, 0.9);
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -89,5 +111,20 @@
   <footer>
     © 2025 Mama Russia. All rights reserved.
   </footer>
+  
+   <audio id="backgroundMusic" loop>
+    <source src="choir.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+   <button id="playButton">Play Music</button>
+  <script>
+    const playButton = document.getElementById("playButton");
+    const music = document.getElementById("backgroundMusic");
+
+    playButton.addEventListener("click", () => {
+      music.play();
+      playButton.style.display = "none"; // hide the button after playing
+    });
+  </script>
 </body>
 </html>
