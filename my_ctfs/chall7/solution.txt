@@ -1,0 +1,27 @@
+Challenge 7 Solution:
+
+Part A:
+
+The challenge is based on a Russian theme. At the beginning, you'll see four main sections and a "Play Music" button.
+A quick inspection reveals that the music is unrelated to the actual challenge.
+
+The four sections are:
+
+Login – This is a honeypot section. There isn’t a valid user account for login. (If the user navigates to /admin, they can see an HTML comment advising them not to waste time on the login.)
+
+History and Culture – This section contains only text.
+
+Glory Page – Initially, this appears broken(to chrome users), but it’s actually intentional. If the user clicks on "Windows Scanner," they will proceed to the next part.
+
+Part B:
+
+The user now sees a picture and some hints via a browser alert.
+The image contains an MP3 file appended to its content. The user should realize they need to look for the "ID3" tag in the file.
+
+Once found, the user extracts a Russian audio recording.
+The translation of the recording instructs the user to go to /hash, and informs them that each letter of the flag is individually hashed.
+
+Part C:
+
+The user needs to write a simple script to brute-force each hash in order to recover the complete flag.
+

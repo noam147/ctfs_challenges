@@ -1,8 +1,12 @@
 from telegram import Update
 from telegram.ext import MessageHandler, ContextTypes, filters,Updater,Application
 import asyncio
-BOT_TOKEN = '7664685884:AAHDjGavBpRHWristKf_u5Om-mUuXFT-ikQ'  # Replace with your actual token
-# Handler for all text messages
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 # Handler for all text messages
 async def handle_message(update: Update, context):
     user_message = update.message.text
