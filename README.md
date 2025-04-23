@@ -12,7 +12,7 @@ This project is a Capture the Flag (CTF) challenge platform focused on web secur
 
 The project is hosted on an AWS VM and is accessible via the following URL:
 http://13.51.79.222:5000/
-
+```
 .
 ├── .gitignore                # Git ignore file
 ├── README.md                 # Project documentation
@@ -26,4 +26,4 @@ http://13.51.79.222:5000/
 │           ├── index.html
 │           └── ...
 ├── requirements.txt          # Python dependencies
-
+```
