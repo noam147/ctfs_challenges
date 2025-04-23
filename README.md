@@ -25,4 +25,5 @@ http://13.51.79.222:5000/
 │       └── templates/        # HTML files used in the challenge
 │           ├── index.html
 │           └── ...
+├── requirements.txt          # Python dependencies
 
