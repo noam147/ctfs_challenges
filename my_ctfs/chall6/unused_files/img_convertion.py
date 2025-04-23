@@ -1,5 +1,5 @@
 from PIL import Image
-
+"""this file is unused for now, it created the logo"""
 def getpix():
     # Open an image file
     image = Image.open('greyscale_image.jpg')
@@ -17,6 +17,8 @@ def changepix():
     pixels = base_image.load()
     for i in range(len(msg_to_insert)):
         pixels[i,0] = ord(msg_to_insert[i])
+
+    #add a white lines for hint to user
     for i in range(len(msg_to_insert),200):
         pixels[i,0] = 255
     for i in range(200):
@@ -28,5 +30,5 @@ def changepix():
     for y in range(base_image.height):
         for x in range(base_image.width):
             print(f"Pixel at ({x},{y}): {pixels[x, y]}")
-
-changepix()
+if __name__ == '__main__':
+    changepix()

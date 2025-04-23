@@ -1,0 +1,44 @@
+Challenge 6 Solution:
+
+Part A:
+
+The challenge is based on a Palestine Army theme (satirical and not real, of course). At the beginning, you'll see five characters and a "Recruit" button.
+The "Recruit" button is essentially a login—but for now, there is no way to pass it.
+
+Some of the characters are clickable and lead to their own pages.
+The user should recognize a pattern and navigate to the Anonymous character’s page.
+
+Once there, the user will notice that a picture is missing—other characters each have three images, but Anonymous only has two.
+The missing image can be found in an HTML comment—it is the logo image.
+
+Part B:
+
+The user now sees a picture with some strange white lines.
+If they read the previous comment ("What are those white lines? I love PIL"), they should understand that the image needs to be opened using PIL in Python.
+
+Using PIL, the user can examine the pixel values.
+The image is in grayscale, and the user should deduce that each non-white pixel in the first row represents an ASCII value of a letter.
+
+This reveals the hidden message:
+"note to myself: username is: HA!CK#R_GAZA"
+
+Next, the user should check the description of Anonymous and find the line:
+"Known by the alias 'Falastech'."
+
+Using that information:
+
+Username: HA!CK#R_GAZA
+
+Password: Falastech
+
+This allows the user to log in and access the Anonymous workspace.
+
+Part C:
+
+Inside the Anonymous workspace, the user will find the flag clearly visible, completing the main challenge.
+
+However, there's a bonus challenge hidden at the end. In the Anonymous workspace, there is a "Socials" section.
+The user should notice that the social links are real and can access the Telegram bot.
+
+They must send the message #freepalestine to the bot (as hinted on the page: "Do not forget to leave #freepalestine at the socials").
+The Telegram bot then responds with an additional flag.

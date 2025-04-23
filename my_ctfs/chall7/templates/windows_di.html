@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows Network Diagnostics</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0078D7; /* blue background like a real Windows diagnostic tool */
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      width: 400px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .popup h1 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+
+    .popup p {
+      margin: 10px 0;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background-color: #0078D7;
+      animation: fill 5s linear infinite;
+    }
+
+    @keyframes fill {
+      0% { width: 0%; }
+      50% { width: 100%; }
+      100% { width: 0%; }
+    }
+
+    .buttons {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup">
+    <h1>Russian Windows Network Diagnostics</h1>
+    <p>Detecting problems...</p>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <div class="buttons">
+      <button onclick="cancel()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+  // Trigger after 5 seconds
+  setTimeout(() => {
+	//do not tell user that image contains the secret recording!
+    alert("Issue found: Unable to resolve DNS server.\nIssue found: Unable to connect to mama russia.\nIssue found: Unable to get the recording.\nConclusion: Take comfort in nice image!\nConclusion: Read about the starting point of mp3 files");
+    // Download the image file directly
+    const link = document.createElement("a");
+    link.href = "secret.png"; // Make sure this file is in the same directory
+    link.download = "secret.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, 5000);
+
+  function cancel() {
+    alert("The diagnostic was canceled.");
+  }
+</script>
+
+</body>
+</html>
