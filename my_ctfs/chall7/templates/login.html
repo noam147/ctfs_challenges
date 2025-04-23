@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - For the Glory</title>
+  <style>
+    body {
+      background-color: #d52b1e;
+      color: white;
+      font-family: "Georgia", serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0039a6;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    .flag-strip {
+      height: 10px;
+      background: linear-gradient(to right, white, blue, red);
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      background-color: #ffffff10;
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid white;
+    }
+
+    label, input {
+      display: block;
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: white;
+      color: #d52b1e;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #eee;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enter the Patriotic Gateway</h1>
+    <div class="flag-strip"></div>
+  </header>
+
+  <main>
+    <form method="POST" action="/login" id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login for Russia">
+    </form>
+
+    <a class="back-link" href="/">← Return to Main Page</a>
+  </main>
+    <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = "/admin";
+        } else {
+          alert("Login failed: " + (data.message || "Invalid credentials"));
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while logging in.");
+      });
+    });
+  </script>
+</body>
+</html>
