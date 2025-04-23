@@ -9,26 +9,25 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/an_workspace")
-def get_flag():
-    with open("workspace.html", "r") as f:
-        return f.read()
+@app.route("/anonymous_workspace")
+def get_an_workspace():
+    return render_template("anonymous_workspace.html")
 @app.route("/login",methods=['POST'])
 def check_login():
     try:
         data = json.loads(request.data.decode())
         if data["username"] == "HA!CK#R_GAZA" and data["password"] == "Falastech":
-            return "/an_workspace"
+            return "/anonymous_workspace"
         return "wrong :("
     except Exception as e:
         return "error :("
 @app.route('/recruit')
 def recruit():
-    with open("login.html","r") as f:
-        return f.read()
-    return "<h2 style='text-align:center;margin-top:40px;'>Recruitment page coming soon. Stay tuned!</h2>"
+    return render_template("login.html")
+
 @app.route("/figure/<figure>")
 def get_figure(figure:str):
+    folder = "characters/"
     while_list = ["Leila Khaled","Ghassan Kanafani","Yasser Arafat","Dalal Mughrabi","Anonymous"]
     flag = False
     for cell in while_list:
@@ -37,9 +36,10 @@ def get_figure(figure:str):
             break
     if not flag:
         return "try again"
-    if not os.path.exists(figure.lower()+".html"):
+    final_path = folder+figure.lower()+".html"
+    if not os.path.exists(final_path):
         return "will be soon..."
-    with open(figure.lower()+".html","r") as f:
+    with open(final_path,"r") as f:
         return f.read()
 if __name__ == '__main__':
     app.run(debug=False,port=PORT,host="0.0.0.0")

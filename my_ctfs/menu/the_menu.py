@@ -1,5 +1,5 @@
 from flask import Flask, render_template_string, jsonify, request
-
+from datetime import datetime
 app = Flask(__name__)
 
 # Example flag and port list
@@ -25,8 +25,10 @@ def answer_ctf():
     answer = data["answer"]
     if answer == flags[index][0]:
         ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+        current_time = datetime.now().strftime('%Y/%m/%d %H:%M')
+        to_file = current_time+" "+ip+" answered: "+str(index)+"\n"
         with open("solvers","a") as f:
-            f.write(ip+" answered: "+str(index))
+            f.write(to_file)
         return jsonify({"message": "Wow, you solved that!"})
     return jsonify({"message": "Wrong answer :("})
 @app.route('/')
