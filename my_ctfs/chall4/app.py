@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     with open("messages.html","r") as f:
         return f.read()
-@app.route("/our_group")
+@app.route("/our_group.txt")
 def the_full_group_chat():
     with open("full_messages.html", "r") as f:
         return f.read()
@@ -38,4 +38,4 @@ def get_links():
         return f.read()
 
 if __name__ == '__main__':
-    app.run(debug=True,port=PORT,host='0.0.0.0')
+    app.run(debug=False,port=PORT,host='0.0.0.0')

@@ -1,0 +1,13 @@
+Challenge 4 Solution:
+
+The user starts on a page displaying fake WhatsApp messages.
+They should notice the reference to our_chat.txt and realize that they need to access it via the URL (/our_chat.txt).
+
+Once opened, the file provides a hint hidden in an HTML comment.
+
+Next, by navigating to /groups, the user encounters numerous fake WhatsApp invitation links. Only one of them is valid.
+Upon finding the correct link, another HTML comment directs the user to visit /secret, where they receive a ZIP file.
+
+The ZIP archive contains two images. The user must inspect their binary content and discover that hidden messages are appended to the end of each image file.
+
+Using the hints provided, the user is led to /Alex_Sam and must identify the correct link by referencing the number 6751, which corresponds to the date mentioned in the fake WhatsApp messages.

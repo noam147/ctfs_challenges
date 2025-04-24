@@ -1,0 +1,5 @@
+Challenge 2 Solution:
+
+The user is provided with the source code of a Python server and is required to connect to it using ncat (or another similar tool) on port 9999.
+In this challenge, the user should recognize that the print function is not the standard built-in function, but a custom implementation.
+By experimenting with multiple arguments passed to the print function, the user will discover that providing exactly six variables reveals the flag.
