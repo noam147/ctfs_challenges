@@ -23,8 +23,6 @@ def get_prompt_at_start():
     global PROMPT
     with open("prompt.txt","r") as file:
         PROMPT = file.read()
-# AIzaSyDT4bqWAM9qKokNsOILcOjgMr6PRkQXrhA - zrwqrwq@gmail.com prg1
-# AIzaSyB7mPzFczFlJbd4Lcyla_XSQkS-owBgERg - zrwqrwq@gmail.com prg2
 def handle_input(user_input: str):
     curr_prompt = PROMPT
     curr_prompt = curr_prompt.replace("REPLACE",user_input)
