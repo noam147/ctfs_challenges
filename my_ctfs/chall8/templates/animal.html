@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal - {{animal_name}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .animal-info {
+            display: inline-block;
+            text-align: left;
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .animal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+			background-color: black;
+        }
+        .animal-description {
+            margin-top: 20px;
+        }
+        .animal-facts {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .animal-facts li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meet the {{animal_name}}!</h1>
+
+    <div class="animal-info">
+        <!-- Replace {animal_name} dynamically -->
+        <img id="animalImage" src="/animals/images/{{animal_name}}" alt="{{animal_name}}" class="animal-img">
+        <div class="animal-description">
+            <p>The {{animal_name}} is a unique and fascinating creature known for its remarkable characteristics.</p>
+            <p>Here are some interesting facts about the {{animal_name}}:</p>
+        </div>
+        <ul class="animal-facts">
+            {{facts}}
+        </ul>
+        <p><a href="/animals">Back to all animals</a></p>
+    </div>
+
+</body>
+</html>
