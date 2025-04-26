@@ -1,7 +1,7 @@
 import bard_handler
 import os
 from flask import Flask, url_for,request, jsonify, request,send_file, render_template, Response, send_from_directory, abort
-PORT = 111118
+PORT = 11118
 app = Flask(__name__)
 @app.route('/animals/images/<animal_img>', methods=['GET'])
 def get_animal_img(animal_img):
