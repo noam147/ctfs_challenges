@@ -1,6 +1,7 @@
 import bard_handler
 import os
-from user_agents import parse
+import hashlib
+from datetime import datetime
 from flask import Flask, url_for,request, jsonify, request,send_file, render_template, Response, send_from_directory, abort
 PORT = 11118
 app = Flask(__name__)
@@ -27,20 +28,31 @@ def get_animal_list():
 @app.route('/click_n_win', methods=['GET'])
 def get_app():
     return "in work"
+def get_currkey():
+    #the key is vhanging every minute
+    curr_date = datetime.now().strftime("%Y%m%d%H%M")
+    to_hash = (curr_date*2).encode()
+    key = hashlib.md5(to_hash).hexdigest()
+    return key
+@app.route('/get_key', methods=['GET'])
+def get_key_for_user():
+    return get_currkey()
+
 @app.route('/win_game', methods=['GET'])
 def get_winner():
+    user_key = request.args.get('key')
+    if not user_key:
+        return "where is your key?"
+    curr_key = get_currkey()
+    if user_key != curr_key:
+        return "the key is incorrect! are you trying to cheat???"
     #check user agaent and see the os and the versoin
     user_agent = request.headers.get('User-Agent')  # Get the User-Agent from the request
     if not user_agent:
         return "where is your user agent ah?"
-    # Parse the User-Agent string
-    user_agent_obj = parse(user_agent)
-
-    # Get the OS and version
-    os = user_agent_obj.os.family  # The operating system
-    os_version = user_agent_obj.os.version_string  # The operating system version
-    device = user_agent_obj.device.family
-    return f"Operating System: {os} {os_version}, Device: {device}"
+    if "anphone" in user_agent:
+        return "Wow you won!!!"
+    return f"we support only \"anphone\" devices :("
 @app.route('/', methods=['GET'])
 def get_index():
     return render_template("index.html")
