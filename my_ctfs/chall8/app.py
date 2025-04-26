@@ -1,5 +1,6 @@
 import bard_handler
 import os
+from user_agents import parse
 from flask import Flask, url_for,request, jsonify, request,send_file, render_template, Response, send_from_directory, abort
 PORT = 11118
 app = Flask(__name__)
@@ -26,6 +27,20 @@ def get_animal_list():
 @app.route('/click_n_win', methods=['GET'])
 def get_app():
     return "in work"
+@app.route('/win_game', methods=['GET'])
+def get_winner():
+    #check user agaent and see the os and the versoin
+    user_agent = request.headers.get('User-Agent')  # Get the User-Agent from the request
+    if not user_agent:
+        return "where is your user agent ah?"
+    # Parse the User-Agent string
+    user_agent_obj = parse(user_agent)
+
+    # Get the OS and version
+    os = user_agent_obj.os.family  # The operating system
+    os_version = user_agent_obj.os.version_string  # The operating system version
+    device = user_agent_obj.device.family
+    return f"Operating System: {os} {os_version}, Device: {device}"
 @app.route('/', methods=['GET'])
 def get_index():
     return render_template("index.html")
