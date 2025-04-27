@@ -28,6 +28,8 @@ def get_animal_list():
 @app.route('/click_n_win', methods=['GET'])
 def get_app():
     return "in work"
+
+### [app game routes] ###
 def get_currkey():
     #the key is vhanging every minute
     curr_date = datetime.now().strftime("%Y%m%d%H%M")
@@ -51,8 +53,12 @@ def get_winner():
     if not user_agent:
         return "where is your user agent ah?"
     if "anphone" in user_agent:
-        return "Wow you won!!!"
-    return f"we support only \"anphone\" devices :("
+        return "Wow you won!!! go to /prizes_claim and claim your prize!"
+    return f"we support only \"anphone\" devices :( you are now probably on android..."
+### [end app game routes] ###
+@app.route('/prizes_claim', methods=['GET'])
+def get_prize():
+    return "to complete"
 @app.route('/', methods=['GET'])
 def get_index():
     return render_template("index.html")
