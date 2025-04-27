@@ -28,6 +28,11 @@ def get_animal(animal_name):
     if os.path.exists(check_path):
         with open(check_path,"r",encoding="utf-8") as f:
             return render_template("animal.html", animal_name=animal_name,facts=f.read())
+
+    animal_img_path = f"animals/images/{animal_name}.png"
+    if not os.path.exists(animal_img_path):
+        abort(404)#each animal must have a picture
+
     facts = "It is boring actually"
     return render_template("animal.html",animal_name=animal_name,facts=facts)
 @app.route('/animals', methods=['GET'])
