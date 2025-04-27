@@ -17,6 +17,13 @@ def get_animal_img(animal_img):
 def get_animal(animal_name):
     animal_name = animal_name.lower()
     animal_name = animal_name.replace("..","")
+
+    if animal_name == 'mongoose':
+        #to prevent user that Dos the web to get the flag in instant
+        key = request.args.get('access_key')
+        if key != 'ZOO_123':
+            return "please enter key in the url- example.com/animals/animal?access_key=KEY"
+
     check_path = f"animals/{animal_name}.txt"
     if os.path.exists(check_path):
         with open(check_path,"r",encoding="utf-8") as f:
