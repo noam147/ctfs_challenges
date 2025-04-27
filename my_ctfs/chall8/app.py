@@ -110,4 +110,4 @@ def talk_with_zoo_keeper():
     return bard_handler.handle_input(user_text)
 if __name__ == '__main__':
     bard_handler.get_prompt_at_start()
-    app.run(debug=True,port=PORT,host='0.0.0.0')
+    app.run(debug=False,port=PORT,host='0.0.0.0')
