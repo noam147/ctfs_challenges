@@ -15,6 +15,7 @@ def get_animal_img(animal_img):
     return send_file(img_path, mimetype='image/png')
 @app.route('/animals/<animal_name>', methods=['GET'])
 def get_animal(animal_name):
+    animal_name = animal_name.lower()
     animal_name = animal_name.replace("..","")
     check_path = f"animals/{animal_name}.txt"
     if os.path.exists(check_path):
@@ -63,7 +64,32 @@ def get_winner():
 ### [end app game routes] ###
 @app.route('/prizes_claim', methods=['GET'])
 def get_prize():
-    return "to complete"
+    return render_template("prizes.html")
+@app.route('/get_balance', methods=['GET'])
+def get_balance():
+    return jsonify({'balance':60})
+
+@app.route('/buy_animal/<animal_name>', methods=['POST'])
+def buy_animal(animal_name):
+    animals = ['Armadillo','Monkey','Buffalo','Liger','Capybara','Mongoose']
+    if animal_name is None or animal_name not in animals:
+        return jsonify({'error': 'animal not good'})
+    try:
+        data = request.get_json()
+        price = data.get('price')
+        user_balance = data.get('user_balance')
+        if price is None or user_balance is None:
+            return jsonify({'error': 'no details'}), 400
+        if int(user_balance)>= int(price):
+            if animal_name == animals[-1]:
+                #hint for user to see the Mongoose
+                return jsonify({'new_balance': int(user_balance) - int(price), 'msg': f'The {animal_name} say thank you:)'})
+            return jsonify({'new_balance':int(user_balance) - int(price),'msg':f'The {animal_name} say thanks!'})
+        else:
+            return jsonify({'error': 'you can not buy that!'})
+    except Exception:
+        return jsonify({'error': 'error'})
+
 @app.route('/', methods=['GET'])
 def get_index():
     return render_template("index.html")
