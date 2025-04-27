@@ -16,7 +16,10 @@ portl4 = 11116
 
 l5 = "MAG{RA!NB@W_TA%LE}"
 portl5 = 11117
-flags = [(l1, portl1),(l2,portl2),(l3,portl3),(l4,portl4),(l5,portl5)]
+
+l6 = "MAG{!_L0VE_AN!MAL$}"
+portl6 = 11118
+flags = [(l1, portl1),(l2,portl2),(l3,portl3),(l4,portl4),(l5,portl5),(l6,portl6)]
 
 @app.route('/check_answer',methods=["POST"])
 def answer_ctf():

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Claim Your Prizes - Zoo Animals</title>
+</head>
+<body>
+    <header>
+        <h1>Claim Your Zoo Animal Prizes!</h1>
+        <p>Check out the available animals you can buy with your points.</p>
+		<h5>access key = ZOO_123</h5>
+    </header>
+
+    <section class="balance">
+        <h2>Your Balance: $<span id="user_balance">0</span></h2>
+    </section>
+
+    <section class="animals">
+        <h2>Available Animals to Buy</h2>
+        <div class="animal" id="animal_1">
+            <h3>Liger</h3>
+            <p>Price: $150</p>
+            <button onclick="buyAnimal('Liger', 150)">Buy</button>
+        </div>
+        <div class="animal" id="animal_2">
+            <h3>Armadillo</h3>
+            <p>Price: $60</p>
+            <button onclick="buyAnimal('Armadillo', 60)">Buy</button>
+        </div>
+        <div class="animal" id="animal_3">
+            <h3>Monkey</h3>
+            <p>Price: $45</p>
+            <button onclick="buyAnimal('Monkey', 45)">Buy</button>
+        </div>
+        <div class="animal" id="animal_4">
+            <h3>Buffalo</h3>
+            <p>Price: $80</p>
+            <button onclick="buyAnimal('Buffalo', 80)">Buy</button>
+        </div>
+        <div class="animal" id="animal_5">
+            <h3>Mongoose</h3>
+            <p>Price: $70</p>
+            <button onclick="buyAnimal('Mongoose', 70)">Buy</button>
+        </div>
+        <div class="animal" id="animal_6">
+            <h3>Capybara</h3>
+            <p>Price: $120</p>
+            <button onclick="buyAnimal('Capybara', 120)">Buy</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Click n Win. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch the user's balance from the server
+        fetch('/get_balance')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('user_balance').textContent = data.balance;
+            })
+            .catch(error => console.log('Error fetching balance:', error));
+
+        // Handle the purchase action
+        function buyAnimal(animal_name, price) {
+            const balance = parseInt(document.getElementById('user_balance').textContent);
+
+            if (balance >= price) {
+                alert("You have successfully bought the animal!");
+                // Send the request to the server to update the balance and animal purchase
+                fetch(`/buy_animal/${animal_name}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ price: price, user_balance: balance })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('user_balance').textContent = data.new_balance;
+                })
+                .catch(error => console.log('Error purchasing animal:', error));
+            } else {
+                alert("Sorry, you don't have enough points to buy this animal.");
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .balance {
+            margin: 20px;
+            padding: 20px;
+            background-color: #80d0f2;
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+
+        .animals {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .animal {
+            background-color: #80d0f2;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .animal h3 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .animal p {
+            font-size: 1.2em;
+        }
+
+        .animal button {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .animal button:hover {
+            background-color: #005f8d;
+        }
+
+        footer {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</body>
+</html>

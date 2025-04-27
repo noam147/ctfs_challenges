@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talk to the Zoo Keeper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .chat-container {
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		 textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical; /* allow user to stretch only vertically */
+        }
+		#userMessage {
+            height: 100px; /* starting size */
+        }
+        #zooKeeperResponse {
+            height: 150px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Talk to the Zoo Keeper</h1>
+
+    <div class="chat-container">
+        <div class="input-group">
+            <label for="userMessage">Your Message:</label>
+            <textarea id="userMessage" placeholder="Type your message..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="zooKeeperResponse">Zoo Keeper's Response:</label>
+            <textarea id="zooKeeperResponse" disabled placeholder="Response will appear here..."></textarea>
+        </div>
+
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value.trim();
+            if (userMessage === '') {
+                alert('Please type a message.');
+                return;
+            }
+			document.getElementById('zooKeeperResponse').value = "Please wait for the zookeeper to respond to you";
+            fetch(`/talk?text=${encodeURIComponent(userMessage)}`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('zooKeeperResponse').value = data;
+                })
+                .catch(error => {
+                    document.getElementById('zooKeeperResponse').value = 'Error contacting the zoo keeper.';
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+
+</body>
+</html>
