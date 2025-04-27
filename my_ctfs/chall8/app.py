@@ -27,8 +27,13 @@ def get_animal_list():
     return send_file("animals/animal_list.txt",mimetype="txt")
 @app.route('/click_n_win', methods=['GET'])
 def get_app():
-    return "in work"
-
+    return render_template("app_front.html")
+@app.route('/app_logo', methods=['GET'])
+def get_app_logo():
+    return send_file("shark_img.png",mimetype="image/png")
+@app.route('/app_file', methods=['GET'])
+def get_app_apk():
+    return send_file("blue_whale.apk",mimetype="apk")
 ### [app game routes] ###
 def get_currkey():
     #the key is vhanging every minute
@@ -67,9 +72,7 @@ def get_index():
 def get_zoo_keeper():
     return render_template("zoo_keeper.html")
 
-@app.route('/bl#e_wh#!e', methods=['GET'])
-def get_blue_whale():
-    return render_template("zoo_keeper.html")
+
 
 @app.route('/talk', methods=['GET'])
 def talk_with_zoo_keeper():
