@@ -4,7 +4,7 @@ import re
 #import google
 #import google.generativeai
 #from google import genai
-from google.genai import types
+#from google.genai import types
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
