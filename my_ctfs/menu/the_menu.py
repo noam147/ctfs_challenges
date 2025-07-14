@@ -1,7 +1,7 @@
 from flask import Flask, render_template_string, jsonify, request
 from datetime import datetime
 app = Flask(__name__)
-
+IP_ADD = "13.61.18.207"
 # Example flag and port list
 l1 = "MAG{DeB$g_!S_A@esome}"
 portl1 = 11111
@@ -47,7 +47,7 @@ def route_things():
     html += """
     <script>
         function visitChallenge(port) {
-            window.location.href = 'http://13.51.79.222:' + port;  // Redirect to the correct port for the challenge
+            window.location.href = f'http://{IP_ADD}:' + port;  // Redirect to the correct port for the challenge
         }
         function answer_ctf(index) {
             var answer = prompt("Enter your answer for challenge " + (index + 1) + ":");
