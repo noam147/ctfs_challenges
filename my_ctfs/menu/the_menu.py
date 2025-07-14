@@ -44,10 +44,11 @@ def route_things():
 
     html += "</ul>"
 
-    html += """
+    html += f"""
     <script>
+        const IP_ADD = "{IP_ADD}";"""+"""
         function visitChallenge(port) {
-            window.location.href = f'http://{IP_ADD}:' + port;  // Redirect to the correct port for the challenge
+            window.location.href = 'http://'+IP_ADD+':' + port;  // Redirect to the correct port for the challenge
         }
         function answer_ctf(index) {
             var answer = prompt("Enter your answer for challenge " + (index + 1) + ":");
